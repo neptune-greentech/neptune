@@ -1,7 +1,7 @@
 import '../styles/index.scss'
 import NeptuneCustomizer from "./NeptuneCustomizer"
 
-addEventListener('DOMContentLoaded', function () {
+addEventListener('DOMContentLoaded', () => {
 
 	new NeptuneCustomizer(NeptuneCustomVars)
 

@@ -1,0 +1,13 @@
+html {
+    font-size: $size-default;
+}
+
+body {
+    background: var(--color-background);
+}
+
+.container {
+    width: $container;
+    margin-right: auto;
+    margin-left: auto;
+}

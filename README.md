@@ -73,11 +73,11 @@ Here, we are sending an array of values defined in `/config/customizer/custom_va
 
 $neptuneCustomVars = [
 	// ...
-	'--background-color' => get_theme_mod('neptune_background_color')
+	'--color-background' => get_theme_mod('neptune_background_color')
 ];
 ```
 
-> *Note that we are setting the value of `--background-color` by passing the ID of the control we declared before to the [`get_theme_mod()`](https://developer.wordpress.org/reference/functions/get_theme_mod/) method*.
+> *Note that we are setting the value of `--color-background` by passing the ID of the control we declared before to the [`get_theme_mod()`](https://developer.wordpress.org/reference/functions/get_theme_mod/) method*.
 
 Under the hood, the `bundle.js` recieve an object of that array and the `NeptuneCustomizer.js` class loop through that object to update the css var defined in the `:root` pseudo-class in `src/scss`.
 
@@ -85,6 +85,6 @@ Under the hood, the `bundle.js` recieve an object of that array and the `Neptune
 /* ./src/styles/index.scss */
 
 :root {
-  --background-color: #000;
+  --color-background: #000;
 }
 ```

@@ -6,5 +6,5 @@
 
 $neptuneCustomVars = [
 	// Colors
-	'--background-color' => get_theme_mod('neptune_background_color')
+	'--color-background' => get_theme_mod('neptune_background_color')
 ];

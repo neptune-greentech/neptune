@@ -1,7 +1,16 @@
-:root {
-  --background-color: #000;
-}
+@import 'settings/colors';
+@import 'settings/sizes';
+@import 'settings/container';
 
-body {
-    background:var(--background-color);
-}
+@import 'tools/functions';
+@import 'tools/mixins';
+
+@import 'generic/reset';
+
+@import 'elements/pages';
+@import 'elements/headings';
+@import 'elements/texts';
+@import 'elements/forms';
+
+@import 'objects/layouts';
+@import 'objects/animations';
