@@ -8,7 +8,7 @@ add_action('customize_register', 'neptune_customizer_colors');
 function neptune_customizer_colors($wp_customize)
 {
     $wp_customize->add_setting('neptune_background_color', [
-        'default' => '#e8e1ef',
+        'default' => '#f5f5f5',
         'transport' => 'refresh',
     ]);
 
