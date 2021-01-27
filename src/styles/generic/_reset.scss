@@ -8,6 +8,16 @@ body {
     margin: 0;
 }
 
+a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+span {
+    display: block;
+}
+
 ul {
     list-style: none;
     padding: 0;

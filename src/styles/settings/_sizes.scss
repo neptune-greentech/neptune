@@ -1,1 +1,37 @@
 $size-default: 16px;
+
+$from-tiny: 500px;
+$to-tiny: $from-tiny - 1;
+$size-tiny: 2.75vw;
+
+$from-small: 700px;
+$to-small: $from-small - 1;
+$size-small: 2vw;
+
+$from-medium: 1000px;
+$to-medium: $from-medium - 1;
+$size-medium: 1.5vw;
+
+$from-large: 1200px;
+$to-large: $from-large - 1;
+$size-large: 1vw;
+
+$from-big: 1400px;
+$to-big: $from-big - 1;
+$size-big: 1vw;
+
+$from-huge: 1600px;
+$to-huge: $from-huge - 1;
+$size-huge: 1vw;
+
+$from-enormous: 1800px;
+$to-enormous: $from-enormous - 1;
+$size-enormous: 1vw;
+
+$from-gigantic: 2000px;
+$to-gigantic: $from-gigantic - 1;
+$size-gigantic: 1vw;
+
+$from-colossal: 2400px;
+$to-colossal: $from-colossal - 1;
+$size-colossal: 1vw;
