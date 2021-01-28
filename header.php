@@ -17,9 +17,9 @@
 
     <?php include_once locate_template('/components/layering-title.php'); ?>
 
-    <?php include_once locate_template('/components/cols3-title.php'); ?>
+    <?php include_once locate_template('/components/service.php'); ?>
 
-    <?php include_once locate_template('/components/cols4-title.php'); ?>
+    <?php include_once locate_template('/components/numbers.php'); ?>
 
     <?php include_once locate_template('/components/gallery.php'); ?>
 

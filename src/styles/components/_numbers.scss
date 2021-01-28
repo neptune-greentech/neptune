@@ -1,0 +1,13 @@
+.numbers {
+    p {
+        &:first-of-type {
+            margin-bottom: s(0.5);
+        }
+        &:last-of-type {
+            font-size: f(2);
+        }
+    }
+    h3 {
+        margin: 0;
+    }
+}
