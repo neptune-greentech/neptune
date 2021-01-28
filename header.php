@@ -22,3 +22,5 @@
     <?php include_once locate_template('/components/cols4-title.php'); ?>
 
     <?php include_once locate_template('/components/gallery.php'); ?>
+
+    <?php include_once locate_template('/components/testimonials.php'); ?>

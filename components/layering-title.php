@@ -5,7 +5,7 @@
 
         <div class="cols">
             <div>
-                <img src="http://localhost:8888/neptune/wp-content/uploads/2021/01/image.jpg" alt="">
+                <img src="http://localhost:8888/neptune/wp-content/uploads/2021/01/image.jpg" alt="Image.">
             </div>
 
             <div class="bloc">
