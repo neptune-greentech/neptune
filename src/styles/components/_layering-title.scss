@@ -1,13 +1,13 @@
 .layering-title {
-    h2 {
-        margin-bottom: s(2);
+    .cols {
+        > div {
+            &:first-of-type {
+                margin-bottom: s(2);
+            }
+        }
     }
     img {
         width: 100%;
-        margin-bottom: s(2);
-    }
-    h3 {
-        margin-bottom: s(2);
     }
     p {
         &:not(:last-of-type) {
@@ -29,6 +29,7 @@
                 &:first-of-type {
                     grid-column: col / span 5;
                     grid-row: row;
+                    margin-bottom: 0;
                 }
                 &:last-of-type {
                     grid-column: col 5 / span 9;
@@ -36,12 +37,6 @@
                     height: fit-content;
                 }
             }
-        }
-        h2 {
-            margin-bottom: s(4);
-        }
-        img {
-            margin: 0;
         }
     }
 }

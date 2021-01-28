@@ -16,3 +16,5 @@
     <?php include_once locate_template('/components/hero.php'); ?>
 
     <?php include_once locate_template('/components/layering-title.php'); ?>
+
+    <?php include_once locate_template('/components/cols3-title.php'); ?>

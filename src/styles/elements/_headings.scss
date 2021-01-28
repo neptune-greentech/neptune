@@ -8,12 +8,14 @@ h2 {
     font-size: f(3.6);
     font-family: $f-light;
     font-weight: 300;
+    margin-bottom: s(4);
 }
 
 h3 {
-    font-size: f(2.8);
+    font-size: f(2.6);
     font-family: $f-light;
     font-weight: 300;
+    margin-bottom: s(2);
 }
 
 @media all and (min-width: $from-medium) {
