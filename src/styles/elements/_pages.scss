@@ -36,11 +36,11 @@ body {
     background: var(--color-background);
 	font-family: $f-regular;
 	color: var(--color-dark);
+	overflow-x: hidden;
 }
 
 .container {
 	width: $container;
-	max-width: 1600px;
     margin-right: auto;
     margin-left: auto;
 }
