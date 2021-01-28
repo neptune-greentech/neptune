@@ -24,3 +24,5 @@
     <?php include_once locate_template('/components/gallery.php'); ?>
 
     <?php include_once locate_template('/components/testimonials.php'); ?>
+
+    <?php include_once locate_template('/components/team.php'); ?>
