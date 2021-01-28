@@ -15,10 +15,4 @@
 
     <?php include_once locate_template('/components/hero.php'); ?>
 
-    <section>
-        <div class="container">
-
-            <h2>Theme based on Gutenberg editor</h2>
-
-        </div>
-    </section>
+    <?php include_once locate_template('/components/layering-title.php'); ?>

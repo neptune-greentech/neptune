@@ -39,7 +39,20 @@ body {
 }
 
 .container {
-    width: $container;
+	width: $container;
+	max-width: 1600px;
     margin-right: auto;
     margin-left: auto;
+}
+
+section {
+	margin-top: s(6);
+	margin-bottom: s(6);
+}
+
+@media all and (min-width: $from-small) {
+	section {
+		margin-top: s(10);
+		margin-bottom: s(10);
+	}
 }

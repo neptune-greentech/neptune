@@ -19,10 +19,10 @@ const setHeightOfHero = () => {
 	hero.style.height = `calc(100vh - ${navHeight}px)`
 }
 
-if (window.matchMedia('(min-width: 700px)').matches) setHeightOfHero()
+if (window.matchMedia('(min-width: 1000px)').matches) setHeightOfHero()
 
 window.addEventListener('resize', () => {
-	if (window.matchMedia('(min-width: 700px)').matches) setHeightOfHero()
+	if (window.matchMedia('(min-width: 1000px)').matches) setHeightOfHero()
 	else hero.style.height = 'auto'
 })
 

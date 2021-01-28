@@ -1,0 +1,21 @@
+.btn {
+    width: 100%;
+    font-size: f(1.2);
+    padding: s(1.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $f-medium;
+    font-weight: 500;
+    
+    &-primary {
+        background: var(--color-dark);
+        color: var(--color-white);
+    }
+}
+
+@media all and (min-width: $from-medium) {
+    .btn {
+        width: 16rem;
+    }
+}

@@ -1,11 +1,30 @@
 h1 {
     font-size: f(6);
-    text-decoration: underline;
-    @media all and (min-width: $from-small) {
-        font-size: 18vw;
-    }
+    font-family: $f-light;
+    font-weight: 300;
 }
 
 h2 {
-    margin: 0;
+    font-size: f(3.6);
+    font-family: $f-light;
+    font-weight: 300;
+}
+
+h3 {
+    font-size: f(2.8);
+    font-family: $f-light;
+    font-weight: 300;
+}
+
+@media all and (min-width: $from-medium) {
+    h1 {
+        font-size: 18vw;
+    }
+    h2 {
+        font-size: 6vw;
+        max-width: 50%;
+    }
+    h3 {
+        font-size: 3vw;
+    }
 }

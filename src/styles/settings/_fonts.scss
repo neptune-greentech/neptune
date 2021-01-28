@@ -14,5 +14,14 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'sf-pro-display-medium';
+    src: url('http://localhost:8888/neptune/wp-content/themes/neptune/src/fonts/sf-pro-display-medium.otf') format('opentype'),;
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
 $f-light: 'sf-pro-display-light', sans-serif;
 $f-regular: 'sf-pro-display-regular', sans-serif;
+$f-medium: 'sf-pro-display-medium', sans-serif;
