@@ -48,11 +48,19 @@ body {
 section {
 	margin-top: s(6);
 	margin-bottom: s(6);
+	&.bg {
+		padding-top: s(6);
+		padding-bottom: s(6);
+	}
 }
 
 @media all and (min-width: $from-small) {
 	section {
 		margin-top: s(10);
 		margin-bottom: s(10);
+		&.bg {
+			padding-top: s(10);
+			padding-bottom: s(10);
+		}
 	}
 }
