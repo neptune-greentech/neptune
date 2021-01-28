@@ -1,5 +1,5 @@
 .nav {
-    padding: s(2) 0;
+    padding: s(2) 0 0;
     background: var(--color-primary);
     &.active {
         .nav_menu {
@@ -93,7 +93,6 @@
             }
             li {
                 font-size: f(2.4);
-                font-family: $f-light;
                 &:not(:last-of-type) {
                     margin-bottom: s(0.5);
                 }
@@ -106,5 +105,4 @@
             }
         }
     }
-
 }

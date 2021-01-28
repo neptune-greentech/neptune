@@ -1,0 +1,11 @@
+h1 {
+    font-size: f(6);
+    text-decoration: underline;
+    @media all and (min-width: $from-small) {
+        font-size: 18vw;
+    }
+}
+
+h2 {
+    margin: 0;
+}

@@ -19,8 +19,12 @@ const setHeightOfHero = () => {
 	hero.style.height = `calc(100vh - ${navHeight}px)`
 }
 
-setHeightOfHero()
-window.addEventListener('resize', () => setHeightOfHero())
+if (window.matchMedia('(min-width: 700px)').matches) setHeightOfHero()
+
+window.addEventListener('resize', () => {
+	if (window.matchMedia('(min-width: 700px)').matches) setHeightOfHero()
+	else hero.style.height = 'auto'
+})
 
 /**
  * Nav mobile menu burger

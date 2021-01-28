@@ -1,0 +1,37 @@
+.hero {
+    width: 100vw;
+    background: var(--color-primary);
+    padding: s(6) 0;
+    @media all and (min-width: $from-small) {
+        padding: 0;
+        min-height: 40rem;
+        text-align: center;
+    }
+
+    &_container {
+        @media all and (min-width: $from-small) {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    h1 {
+        margin: s(0.5) 0 s(2);
+        @media all and (min-width: $from-small) {
+            margin: s(-1) 0 s(3);
+        }
+    }
+    
+    p {
+        &:last-of-type {
+            @media all and (min-width: $from-small) {
+                max-width: 24rem;
+                margin-right: auto;
+                margin-left: auto;
+            }
+        }
+    }
+}

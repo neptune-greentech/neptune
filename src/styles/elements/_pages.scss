@@ -34,7 +34,8 @@ html {
 
 body {
     background: var(--color-background);
-    font-family: $f-regular;
+	font-family: $f-regular;
+	color: var(--color-dark);
 }
 
 .container {
