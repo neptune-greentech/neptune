@@ -1,4 +1,4 @@
-.layering-title {
+.layering {
     .cols {
         > div {
             &:first-of-type {
@@ -20,7 +20,7 @@
 }
 
 @media all and (min-width: $from-medium) {
-    .layering-title {
+    .layering {
         .cols {
             display: grid;
             grid-template-columns: repeat(9, [col] 1fr);
@@ -35,6 +35,18 @@
                     grid-column: col 5 / span 9;
                     grid-row: row;
                     height: fit-content;
+                }
+            }
+        }
+        &-reverse {
+            .cols {
+                > div {
+                    &:first-of-type {
+                        grid-column: col 5 / span 9;
+                    }
+                    &:last-of-type {
+                        grid-column: col / span 5;
+                    }
                 }
             }
         }

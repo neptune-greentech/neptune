@@ -1,0 +1,22 @@
+.process {
+    &.bg {
+        background-image: url('http://localhost:8888/neptune/wp-content/uploads/2021/01/image.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    p {
+        &:not(:last-of-type) {
+            margin-bottom: s(1);
+        }
+    }
+}
+
+@media all and (min-width: $from-medium) {
+    .process {
+        .bloc {
+            width: 50%;
+            margin-left: auto;
+        }
+    }
+}

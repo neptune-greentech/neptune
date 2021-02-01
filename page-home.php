@@ -10,7 +10,7 @@
 
 <?php include_once locate_template('/components/hero-full.php'); ?>
 
-<?php include_once locate_template('/components/layering-title.php'); ?>
+<?php include_once locate_template('/components/layering.php'); ?>
 
 <?php include_once locate_template('/components/service.php'); ?>
 
