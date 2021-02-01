@@ -1,4 +1,4 @@
-<header class="hero">
+<header class="hero hero-full">
     <div class="container hero_container">
 
         <p>A green wordpress theme</p>

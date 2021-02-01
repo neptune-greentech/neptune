@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
-<?php the_content(); ?>
+<?php include_once locate_template('/components/hero-classic.php'); ?>
+
+<?php include_once locate_template('/components/blog.php'); ?>
 
 <?php get_footer(); ?>

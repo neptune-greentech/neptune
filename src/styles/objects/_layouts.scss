@@ -5,6 +5,17 @@
 }
 
 @media all and (min-width: $from-medium) {
+    .col-2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: s(2);
+        align-items: center;
+        .col {
+            &:not(:last-of-type) {
+                margin-bottom: 0;
+            }
+        }
+    }
     .col-3 {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -15,9 +26,6 @@
             }
         }
     }
-}
-
-@media all and (min-width: $from-medium) {
     .col-4 {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -31,6 +39,9 @@
 }
 
 @media all and (min-width: $from-large) {
+    .col-2 {
+        grid-gap: s(4);
+    }
     .col-4 {
         grid-template-columns: repeat(4, 1fr);
     }

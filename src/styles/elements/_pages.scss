@@ -49,7 +49,7 @@ body {
 section {
 	margin-top: s(6);
 	margin-bottom: s(6);
-	.bg {
+	&.bg {
 		background: var(--color-primary);
 		padding-top: s(6);
 		padding-bottom: s(6);

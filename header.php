@@ -12,17 +12,3 @@
 <body>
 
     <?php include_once locate_template('/components/nav.php'); ?>
-
-    <?php include_once locate_template('/components/hero.php'); ?>
-
-    <?php include_once locate_template('/components/layering-title.php'); ?>
-
-    <?php include_once locate_template('/components/service.php'); ?>
-
-    <?php include_once locate_template('/components/numbers.php'); ?>
-
-    <?php include_once locate_template('/components/gallery.php'); ?>
-
-    <?php include_once locate_template('/components/testimonials.php'); ?>
-
-    <?php include_once locate_template('/components/team.php'); ?>
