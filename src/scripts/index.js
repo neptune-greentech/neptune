@@ -12,7 +12,9 @@ const
 	navIcon = document.querySelector('.nav_icon'),
 	heroFull = document.querySelector('.hero-full'),
 	heroImg = document.querySelector('.hero_img'),
-	heroOverlay = document.querySelector('.hero_overlay')
+	heroOverlay = document.querySelector('.hero_overlay'),
+	slider = document.querySelector('.slider'),
+	sliderInner = document.querySelector('.slider_inner')
 
 /**
  * Nav mobile menu burger
@@ -52,4 +54,48 @@ if (heroOverlay) {
 	}
 	setHeightOfOverlay()
 	window.addEventListener('resize', () => setHeightOfOverlay())
+}
+
+/**
+ * Gallery draggable
+ */
+
+let
+	pressed = false,
+	startX = null,
+	x = null
+
+slider.addEventListener('mousedown', e => {
+	pressed = true
+	startX = e.offsetX - sliderInner.offsetLeft
+	slider.style.cursor = 'grabbing'
+})
+
+slider.addEventListener('mouseenter', () => slider.style.cursor = 'grab')
+
+slider.addEventListener('mouseup', () => slider.style.cursor = 'grab')
+
+window.addEventListener('mouseup', () => pressed = false)
+
+slider.addEventListener('mousemove', e => {
+	if (!pressed) return
+	e.preventDefault()
+
+	x = e.offsetX
+
+	sliderInner.style.left = `${x - startX}px`
+
+	checkBoundary()
+})
+
+function checkBoundary() {
+	const
+		outer = slider.getBoundingClientRect(),
+		inner = sliderInner.getBoundingClientRect()
+
+	if (parseInt(sliderInner.style.left) > 0) {
+		sliderInner.style.left = '0px'
+	} else if (inner.right < outer.right) {
+		sliderInner.style.left = `-${inner.width - outer.width}px`
+	}
 }
