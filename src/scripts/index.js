@@ -13,8 +13,8 @@ const
 	heroFull = document.querySelector('.hero-full'),
 	heroImg = document.querySelector('.hero_img'),
 	heroOverlay = document.querySelector('.hero_overlay'),
-	slider = document.querySelector('.slider'),
-	sliderInner = document.querySelector('.slider_inner')
+	gallery = document.querySelector('.gallery_slider'),
+	galleryInner = document.querySelector('.gallery_slider_inner')
 
 /**
  * Nav mobile menu burger
@@ -65,37 +65,107 @@ let
 	startX = null,
 	x = null
 
-slider.addEventListener('mousedown', e => {
+gallery.addEventListener('mousedown', e => {
 	pressed = true
-	startX = e.offsetX - sliderInner.offsetLeft
-	slider.style.cursor = 'grabbing'
+	startX = e.offsetX - galleryInner.offsetLeft
+	gallery.style.cursor = 'grabbing'
 })
 
-slider.addEventListener('mouseenter', () => slider.style.cursor = 'grab')
+gallery.addEventListener('mouseenter', () => gallery.style.cursor = 'grab')
 
-slider.addEventListener('mouseup', () => slider.style.cursor = 'grab')
+gallery.addEventListener('mouseup', () => gallery.style.cursor = 'grab')
 
 window.addEventListener('mouseup', () => pressed = false)
 
-slider.addEventListener('mousemove', e => {
+gallery.addEventListener('mousemove', e => {
 	if (!pressed) return
 	e.preventDefault()
 
 	x = e.offsetX
-
-	sliderInner.style.left = `${x - startX}px`
+	galleryInner.style.left = `${(x - startX)}px`
 
 	checkBoundary()
 })
 
 function checkBoundary() {
 	const
-		outer = slider.getBoundingClientRect(),
-		inner = sliderInner.getBoundingClientRect()
+		outer = gallery.getBoundingClientRect(),
+		inner = galleryInner.getBoundingClientRect()
 
-	if (parseInt(sliderInner.style.left) > 0) {
-		sliderInner.style.left = '0px'
+	if (parseInt(galleryInner.style.left) > 0) {
+		galleryInner.style.left = '0px'
 	} else if (inner.right < outer.right) {
-		sliderInner.style.left = `-${inner.width - outer.width}px`
+		galleryInner.style.left = `-${inner.width - outer.width}px`
 	}
 }
+
+/**
+ * Testimonials slider
+ */
+
+document.querySelectorAll('.testimonials').forEach(testimonials => {
+
+	const
+		slider = testimonials.querySelector('.slider_inner'),
+		slides = testimonials.querySelectorAll('.slide'),
+		prevBtn = testimonials.querySelector('.prev'),
+		nextBtn = testimonials.querySelector('.next'),
+		numSlides = slides.length
+
+	let
+		slideWidth = slides[0].offsetWidth,
+		slideMarginRight = parseInt(getComputedStyle(slides[0]).marginRight),
+		moveX = slideWidth + slideMarginRight
+
+	const
+		firstClone = slides[0].cloneNode(true),
+		lastClone = slides[numSlides - 1].cloneNode(true)
+
+	firstClone.setAttribute('id', 'first-clone')
+	lastClone.setAttribute('id', 'last-clone')
+
+	slider.appendChild(firstClone)
+	slider.prepend(lastClone)
+
+	const allSlides = testimonials.querySelectorAll('.slide')
+
+	slider.style.transform = `translateX(${-moveX}px)`
+
+	let counter = 1
+
+	nextBtn.addEventListener('click', () => {
+		counter++
+		slider.style.transition = 'transform 0.5s ease-in-out, opacity 0.2s'
+		slider.style.transform = `translateX(${-(moveX * counter)}px)`
+		if (counter >= allSlides.length) counter = numSlides
+	})
+
+	prevBtn.addEventListener('click', () => {
+		counter--
+		slider.style.transition = 'transform 0.5s ease-in-out, opacity 0.2s'
+		slider.style.transform = `translateX(${-(moveX * counter)}px)`
+		if (counter < 0) counter = 0
+	})
+
+	slider.addEventListener('transitionend', () => {
+		if (allSlides[counter].id === 'first-clone') {
+			slider.style.transition = 'none'
+			counter = 1
+			slider.style.transform = `translateX(${-(moveX * counter)}px)`
+		}
+
+		if (allSlides[counter].id === 'last-clone') {
+			slider.style.transition = 'none'
+			counter = numSlides
+			slider.style.transform = `translateX(${-(moveX * counter)}px)`
+		}
+	})
+
+	window.addEventListener('resize', () => {
+		slideWidth = slides[0].offsetWidth
+		slideMarginRight = parseInt(getComputedStyle(slides[0]).marginRight)
+		moveX = slideWidth + slideMarginRight
+		slider.style.transition = 'none'
+		slider.style.transform = `translateX(${-(moveX * counter)}px)`
+	})
+})

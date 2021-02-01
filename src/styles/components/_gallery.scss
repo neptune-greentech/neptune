@@ -1,5 +1,5 @@
 .gallery {
-    .slider {
+    &_slider {
         overflow: hidden;
         position: relative;
         height: 26rem;
@@ -13,13 +13,13 @@
             gap: 1rem;
             pointer-events: none;
         }
-        .slide {
-            width: 36rem;
-            height: 100%;
-            background-image: url('http://localhost:8888/neptune/wp-content/uploads/2021/01/image.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
+    }
+    &_slide {
+        width: 36rem;
+        height: 100%;
+        background-image: url('http://localhost:8888/neptune/wp-content/uploads/2021/01/image.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 }
