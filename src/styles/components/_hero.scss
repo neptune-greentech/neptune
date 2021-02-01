@@ -7,13 +7,42 @@
             margin: s(0.5) 0 s(1);
         }
     }
+    &-article {
+        padding: s(6) 0 0;
+        position: relative;
+        p {
+            a {
+                display: inline;
+                text-decoration: underline;
+            }
+        }
+        h1 {
+            font-size: f(4.2);
+            margin: s(0.5) 0 s(6);
+        }
+        img {
+            width: 100%;
+            max-width: 50rem;
+            margin-right: auto;
+            margin-left: auto;
+            position: relative;
+            z-index: 1;
+        }
+        span {
+            width: 100%;
+            background: var(--color-background);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    }
 }
 
 @media all and (min-width: $from-medium) {
     .hero {
-        padding: 0;
         text-align: center;
         &-full {
+            padding: 0;
             min-height: 40rem;
             h1 {
                 margin: s(-1) 0 s(3);

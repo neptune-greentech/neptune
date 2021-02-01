@@ -10,7 +10,9 @@ const
 	body = document.body,
 	nav = document.querySelector('.nav'),
 	navIcon = document.querySelector('.nav_icon'),
-	hero = document.querySelector('.hero-full')
+	heroFull = document.querySelector('.hero-full'),
+	heroImg = document.querySelector('.hero_img'),
+	heroOverlay = document.querySelector('.hero_overlay')
 
 /**
  * Nav mobile menu burger
@@ -26,14 +28,28 @@ navIcon.addEventListener('click', () => setActiveClassOnNav())
 /**
  * Height of hero depends of nav height.
  */
-const setHeightOfHero = () => {
-	const navHeight = nav.offsetHeight
-	hero.style.height = `calc(100vh - ${navHeight}px)`
+if (heroFull) {
+	const setHeightOfHero = () => {
+		const navHeight = nav.offsetHeight
+		heroFull.style.height = `calc(100vh - ${navHeight}px)`
+	}
+
+	if (window.matchMedia('(min-width: 1000px)').matches) setHeightOfHero()
+
+	window.addEventListener('resize', () => {
+		if (window.matchMedia('(min-width: 1000px)').matches) setHeightOfHero()
+		else heroFull.style.height = 'auto'
+	})
 }
 
-if (window.matchMedia('(min-width: 1000px)').matches) setHeightOfHero()
-
-window.addEventListener('resize', () => {
-	if (window.matchMedia('(min-width: 1000px)').matches) setHeightOfHero()
-	else hero.style.height = 'auto'
-})
+/**
+ * Height of the white part on article hero
+ */
+if (heroOverlay) {
+	const setHeightOfOverlay = () => {
+		const overlayHeight = heroImg.offsetHeight
+		heroOverlay.style.height = `calc(${overlayHeight / 2}px)`
+	}
+	setHeightOfOverlay()
+	window.addEventListener('resize', () => setHeightOfOverlay())
+}

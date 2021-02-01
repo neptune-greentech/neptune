@@ -1,0 +1,28 @@
+.article {
+    h2, h3, h4, h5, h6, p, ul {
+        max-width: 42rem;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    h2 {
+        margin: s(4) auto s(2);
+    }
+    p {
+        margin: s(1) auto;
+    }
+
+    img {
+        width: 100%;
+        max-width: 50rem;
+        display: block;
+        margin: s(4) auto;
+    }
+}
+
+@media all and (min-width: $from-medium) {
+    .article {
+        h2 {
+            font-size: f(3.6);
+        }
+    }
+}
