@@ -65,27 +65,52 @@ let
 	startX = null,
 	x = null
 
-gallery.addEventListener('mousedown', e => {
-	pressed = true
-	startX = e.offsetX - galleryInner.offsetLeft
-	gallery.style.cursor = 'grabbing'
-})
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+	gallery.addEventListener('touchstart', e => {
+		pressed = true
+		startX = e.touches[0].screenX - galleryInner.offsetLeft
+		gallery.style.cursor = 'grabbing'
+	})
 
-gallery.addEventListener('mouseenter', () => gallery.style.cursor = 'grab')
+	gallery.addEventListener('touchenter', () => gallery.style.cursor = 'grab')
 
-gallery.addEventListener('mouseup', () => gallery.style.cursor = 'grab')
+	gallery.addEventListener('touchend', () => gallery.style.cursor = 'grab')
 
-window.addEventListener('mouseup', () => pressed = false)
+	window.addEventListener('touchend', () => pressed = false)
 
-gallery.addEventListener('mousemove', e => {
-	if (!pressed) return
-	e.preventDefault()
+	gallery.addEventListener('touchmove', e => {
+		if (!pressed) return
+		e.preventDefault()
 
-	x = e.offsetX
-	galleryInner.style.left = `${(x - startX)}px`
+		x = e.touches[0].screenX
 
-	checkBoundary()
-})
+		galleryInner.style.left = `${(x - startX)}px`
+
+		checkBoundary()
+	})
+} else {
+	gallery.addEventListener('mousedown', e => {
+		pressed = true
+		startX = e.offsetX - galleryInner.offsetLeft
+		gallery.style.cursor = 'grabbing'
+	})
+
+	gallery.addEventListener('mouseenter', () => gallery.style.cursor = 'grab')
+
+	gallery.addEventListener('mouseup', () => gallery.style.cursor = 'grab')
+
+	window.addEventListener('mouseup', () => pressed = false)
+
+	gallery.addEventListener('mousemove', e => {
+		if (!pressed) return
+		e.preventDefault()
+
+		x = e.offsetX
+		galleryInner.style.left = `${(x - startX)}px`
+
+		checkBoundary()
+	})
+}
 
 function checkBoundary() {
 	const
