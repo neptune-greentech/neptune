@@ -1,5 +1,5 @@
 <?php
-
+include_once locate_template('/config/blog/index.php');
 include_once locate_template('/config/clean/index.php');
 include_once locate_template('/config/customizer/index.php');
 include_once locate_template('/config/enqueue.php');

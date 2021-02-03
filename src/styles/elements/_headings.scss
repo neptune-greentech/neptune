@@ -1,5 +1,5 @@
 h1 {
-    font-size: f(6);
+    font-size: f(5);
     font-family: $f-light;
     font-weight: 300;
 }
@@ -20,7 +20,7 @@ h3 {
 
 @media all and (min-width: $from-medium) {
     h1 {
-        font-size: 18vw;
+        font-size: 10vw;
     }
     h2 {
         font-size: 6vw;
