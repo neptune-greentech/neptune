@@ -1,13 +1,13 @@
     <footer class="footer bg">
         <div class="container footer_container">
-        
+
             <a class="footer_logo" href="<?= home_url(); ?>">
-                <img src="http://localhost:8888/neptune/wp-content/uploads/2021/01/logo-neptune.png" alt="Logo Neptune.">
+                <img src="<?php echo get_template_directory_uri() . '/dist/images/logo-neptune.png';?>" alt="Logo Neptune.">
             </a>
 
-            <?php 
+            <?php
             wp_nav_menu(
-                array( 
+                array(
                     'menu' => 'main_menu',
                     'container' => 'div',
                     'container_class' => 'footer_menu',
@@ -17,26 +17,34 @@
             ?>
 
             <ul class="footer_social">
+				<?php if(get_theme_mod('neptune_social_facebook')) :?>
+					<li>
+						<a href="<?php echo esc_url(get_theme_mod('neptune_social_facebook')); ?>">
+							<img src="<?php echo get_template_directory_uri() . '/dist/images/icon-facebook.png'; ?>" alt="">
+						</a>
+					</li>
+				<?php endif; ?>
+				<?php if(get_theme_mod('neptune_social_instagram')) :?>
                 <li>
-                    <a href="#">
-                        <img src="http://localhost:8888/neptune/wp-content/uploads/2021/02/icon-facebook.png" alt="">
+                    <a href="<?php echo esc_url(get_theme_mod('neptune_social_instagram')); ?>">
+                        <img src="<?php echo get_template_directory_uri() . '/dist/images/icon-instagram.png'; ?>" alt="">
                     </a>
-                </li>
+				</li>
+				<?php endif; ?>
+				<?php if(get_theme_mod('neptune_social_linkedin')) :?>
                 <li>
-                    <a href="#">
-                        <img src="http://localhost:8888/neptune/wp-content/uploads/2021/02/icon-instagram.png" alt="">
+                    <a href="<?php echo esc_url(get_theme_mod('neptune_social_linkedin')); ?>">
+                        <img src="<?php echo get_template_directory_uri() . '/dist/images/icon-linkedin.png'; ?>" alt="">
                     </a>
-                </li>
+				</li>
+				<?php endif; ?>
+				<?php if(get_theme_mod('neptune_social_twitter')) :?>
                 <li>
-                    <a href="#">
-                        <img src="http://localhost:8888/neptune/wp-content/uploads/2021/01/icon-linkedin.png" alt="">
+                    <a href="<?php echo esc_url(get_theme_mod('neptune_social_twitter')); ?>">
+                        <img src="<?php echo get_template_directory_uri() . '/dist/images/icon-twitter.png'; ?>" alt="">
                     </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="http://localhost:8888/neptune/wp-content/uploads/2021/01/icon-twitter.png" alt="">
-                    </a>
-                </li>
+				</li>
+				<?php endif; ?>
             </ul>
 
         </div>
