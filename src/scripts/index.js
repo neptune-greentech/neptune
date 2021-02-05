@@ -1,7 +1,11 @@
 import '../styles/index.scss'
-import NeptuneCustomizer from "./NeptuneCustomizer"
+//import NeptuneCustomizer from "./NeptuneCustomizer"
 
-addEventListener('DOMContentLoaded', () => new NeptuneCustomizer(NeptuneCustomVars))
+/*addEventListener('DOMContentLoaded', function () {
+	if (NeptuneCustomVars) {
+		new NeptuneCustomizer(NeptuneCustomVars)
+	}
+})*/
 
 /**
  * Variables
@@ -70,13 +74,13 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 		pressed = true
 		startX = e.touches[0].screenX - galleryInner.offsetLeft
 		gallery.style.cursor = 'grabbing'
-	})
+	}, {passive: true})
 
-	gallery.addEventListener('touchenter', () => gallery.style.cursor = 'grab')
+	gallery.addEventListener('touchenter', () => gallery.style.cursor = 'grab', {passive: true})
 
-	gallery.addEventListener('touchend', () => gallery.style.cursor = 'grab')
+	gallery.addEventListener('touchend', () => gallery.style.cursor = 'grab', {passive: true})
 
-	window.addEventListener('touchend', () => pressed = false)
+	window.addEventListener('touchend', () => pressed = false, {passive: true})
 
 	gallery.addEventListener('touchmove', e => {
 		if (!pressed) return
@@ -87,7 +91,7 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 		galleryInner.style.left = `${(x - startX)}px`
 
 		checkBoundary()
-	})
+	}, {passive: true})
 } else {
 	gallery.addEventListener('mousedown', e => {
 		pressed = true

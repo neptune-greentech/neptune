@@ -16,8 +16,10 @@ export default class NeptuneCustomizer {
 	 * @return {void}
 	 */
 	setOptionProperty(NeptuneCustomVars) {
-		for (let option in NeptuneCustomVars) {
-			document.documentElement.style.setProperty(option, this.options[option])
+		if (NeptuneCustomVars) {
+			for (let option in NeptuneCustomVars) {
+				document.documentElement.style.setProperty(option, this.options[option])
+			}
 		}
 	}
 

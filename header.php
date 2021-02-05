@@ -10,5 +10,5 @@
 </head>
 
 <body>
-
+	<?php include_once locate_template('/components/bar.php'); ?>
     <?php include_once locate_template('/components/nav.php'); ?>
