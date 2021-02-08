@@ -1,11 +1,11 @@
 import '../styles/index.scss'
-//import NeptuneCustomizer from "./NeptuneCustomizer"
+import NeptuneCustomizer from "./NeptuneCustomizer"
 
-/*addEventListener('DOMContentLoaded', function () {
+addEventListener('DOMContentLoaded', function () {
 	if (NeptuneCustomVars) {
 		new NeptuneCustomizer(NeptuneCustomVars)
 	}
-})*/
+})
 
 /**
  * Variables
@@ -29,7 +29,9 @@ const setActiveClassOnNav = () => {
 		: body.classList.add('active')
 }
 
-navIcon.addEventListener('click', () => setActiveClassOnNav())
+if(navIcon) {
+	navIcon.addEventListener('click', () => setActiveClassOnNav())
+}
 
 /**
  * Height of hero depends of nav height.
@@ -69,51 +71,53 @@ let
 	startX = null,
 	x = null
 
-if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-	gallery.addEventListener('touchstart', e => {
-		pressed = true
-		startX = e.touches[0].screenX - galleryInner.offsetLeft
-		gallery.style.cursor = 'grabbing'
-	}, {passive: true})
+if(gallery) {
+	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+		gallery.addEventListener('touchstart', e => {
+			pressed = true
+			startX = e.touches[0].screenX - galleryInner.offsetLeft
+			gallery.style.cursor = 'grabbing'
+		}, {passive: true})
 
-	gallery.addEventListener('touchenter', () => gallery.style.cursor = 'grab', {passive: true})
+		gallery.addEventListener('touchenter', () => gallery.style.cursor = 'grab', {passive: true})
 
-	gallery.addEventListener('touchend', () => gallery.style.cursor = 'grab', {passive: true})
+		gallery.addEventListener('touchend', () => gallery.style.cursor = 'grab', {passive: true})
 
-	window.addEventListener('touchend', () => pressed = false, {passive: true})
+		window.addEventListener('touchend', () => pressed = false, {passive: true})
 
-	gallery.addEventListener('touchmove', e => {
-		if (!pressed) return
-		e.preventDefault()
+		gallery.addEventListener('touchmove', e => {
+			if (!pressed) return
+			e.preventDefault()
 
-		x = e.touches[0].screenX
+			x = e.touches[0].screenX
 
-		galleryInner.style.left = `${(x - startX)}px`
+			galleryInner.style.left = `${(x - startX)}px`
 
-		checkBoundary()
-	}, {passive: true})
-} else {
-	gallery.addEventListener('mousedown', e => {
-		pressed = true
-		startX = e.offsetX - galleryInner.offsetLeft
-		gallery.style.cursor = 'grabbing'
-	})
+			checkBoundary()
+		}, {passive: true})
+	} else {
+		gallery.addEventListener('mousedown', e => {
+			pressed = true
+			startX = e.offsetX - galleryInner.offsetLeft
+			gallery.style.cursor = 'grabbing'
+		})
 
-	gallery.addEventListener('mouseenter', () => gallery.style.cursor = 'grab')
+		gallery.addEventListener('mouseenter', () => gallery.style.cursor = 'grab')
 
-	gallery.addEventListener('mouseup', () => gallery.style.cursor = 'grab')
+		gallery.addEventListener('mouseup', () => gallery.style.cursor = 'grab')
 
-	window.addEventListener('mouseup', () => pressed = false)
+		window.addEventListener('mouseup', () => pressed = false)
 
-	gallery.addEventListener('mousemove', e => {
-		if (!pressed) return
-		e.preventDefault()
+		gallery.addEventListener('mousemove', e => {
+			if (!pressed) return
+			e.preventDefault()
 
-		x = e.offsetX
-		galleryInner.style.left = `${(x - startX)}px`
+			x = e.offsetX
+			galleryInner.style.left = `${(x - startX)}px`
 
-		checkBoundary()
-	})
+			checkBoundary()
+		})
+	}
 }
 
 function checkBoundary() {

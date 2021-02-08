@@ -1,0 +1,194 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Project-Id-Version: Neptune\n"
+"POT-Creation-Date: 2021-02-08 17:04+0100\n"
+"PO-Revision-Date: 2021-02-08 17:04+0100\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;"
+"esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;"
+"esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Last-Translator: \n"
+"Language: fr_FR\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+"X-Poedit-SearchPathExcluded-1: vendor\n"
+"X-Poedit-SearchPathExcluded-2: node_modules\n"
+
+#: components/blog.php:19
+msgid "Published"
+msgstr "Publié"
+
+#: components/blog.php:22
+#, fuzzy
+msgid "Categorized as"
+msgstr "Classé comme"
+
+#: components/blog.php:27
+msgid "Continue reading"
+msgstr "Continuer la lecture"
+
+#: config/customizer/colors.php:40
+msgid "Background Color"
+msgstr "Couleur d’arrière-plan"
+
+#: config/customizer/colors.php:43
+msgid "Please select a background color"
+msgstr "S’il vous plaît sélectionner une couleur de fond"
+
+#: config/customizer/colors.php:53
+msgid "Primary Color"
+msgstr "Couleur principale"
+
+#: config/customizer/colors.php:56
+msgid "Please select a primary color"
+msgstr "S’il vous plaît sélectionner une couleur primaire"
+
+#: config/customizer/colors.php:66
+msgid "Dark Color"
+msgstr "Couleur Foncé"
+
+#: config/customizer/colors.php:69
+msgid "Please select a dark color"
+msgstr "S’il vous plaît sélectionner une couleur foncée"
+
+#: config/customizer/colors.php:79
+msgid "white Color"
+msgstr "couleur blanche"
+
+#: config/customizer/colors.php:82
+msgid "Please select a white color"
+msgstr "S’il vous plaît sélectionner une couleur blanche"
+
+#: config/customizer/colors.php:92
+msgid "gray Color"
+msgstr "couleur grise"
+
+#: config/customizer/colors.php:95
+msgid "Please select a gray color"
+msgstr "S’il vous plaît sélectionner une couleur grise"
+
+#: config/customizer/footer.php:12
+msgid "Footer"
+msgstr "Pied de page"
+
+#: config/customizer/footer.php:27
+msgid "Copyright text"
+msgstr "Texte de copyright"
+
+#: config/customizer/homepage.php:21
+msgid "Homepage header paragraph"
+msgstr "Paragraphe d’en-tête de page d’accueil"
+
+#: config/customizer/social_networks.php:12
+msgid "Social Networks"
+msgstr "Réseaux sociaux"
+
+#: config/customizer/social_networks.php:13
+msgid ""
+"Please add your social networks links. Leave empty if you don't want the "
+"social network's icon to appear."
+msgstr ""
+"S’il vous plaît ajouter vos liens de réseaux sociaux. Laissez vide si "
+"vous ne voulez pas que l’icône du réseau social apparaisse."
+
+#: config/customizer/social_networks.php:27
+msgid "Facebook Link"
+msgstr "Lien Facebook"
+
+#: config/customizer/social_networks.php:30
+#: config/customizer/social_networks.php:52
+#: config/customizer/social_networks.php:74
+#: config/customizer/social_networks.php:96
+#: config/customizer/social_networks.php:118
+msgid "https://"
+msgstr "https://"
+
+#: config/customizer/social_networks.php:49
+msgid "Twitter Link"
+msgstr "Lien Twitter"
+
+#: config/customizer/social_networks.php:71
+msgid "Instagram Link"
+msgstr "Lien Instagram"
+
+#: config/customizer/social_networks.php:93
+msgid "Tiktok Link"
+msgstr "Lien Tiktok"
+
+#: config/customizer/social_networks.php:115
+msgid "LinkedIn Link"
+msgstr "Lien Linkedin"
+
+#. Theme Name of the plugin/theme
+#: config/editor/index.php:27
+msgid "Neptune"
+msgstr "Neptune"
+
+#: config/editor/index.php:38
+msgid "Layering"
+msgstr "Superposition"
+
+#: config/editor/index.php:208
+msgid "Our services"
+msgstr "Nos services"
+
+#: config/editor/index.php:332
+msgid "Numbers"
+msgstr "Nombres"
+
+#: config/editor/index.php:456
+msgid "Gallery"
+msgstr "Galerie"
+
+#: config/editor/index.php:565
+msgid "Testimonials"
+msgstr "Témoignages"
+
+#: config/editor/index.php:689
+msgid "Team"
+msgstr "Équipe"
+
+#: config/editor/index.php:974
+msgid "Process"
+msgstr "Processus"
+
+#: config/editor/index.php:1061
+msgid "Partners"
+msgstr "Partenaires"
+
+#: config/editor/index.php:1170
+msgid "Places"
+msgstr "Lieux"
+
+#: config/menus.php:5
+msgid "Main Menu"
+msgstr "Menu principal"
+
+#: config/menus.php:6
+msgid "Secondary Menu"
+msgstr "Menu secondaire"
+
+#. Description of the plugin/theme
+msgid "A green wordpress theme."
+msgstr "Un thème wordpress vert."
+
+#. Author of the plugin/theme
+msgid "Kairos Agency"
+msgstr "Agence Kairos"
+
+#. Author URI of the plugin/theme
+msgid "https://www.kairos-agency.com/"
+msgstr "https://www.kairos-agency.com/"
+
+#. Template Name of the plugin/theme
+msgid "page-home."
+msgstr "page-accueil."

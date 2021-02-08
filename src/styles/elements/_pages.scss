@@ -41,9 +41,17 @@ body {
 
 .container {
 	width: $container;
-	max-width: 1600px;
+	//max-width: 1600px;
     margin-right: auto;
-    margin-left: auto;
+	margin-left: auto;
+}
+
+.container-content {
+	width: $container;
+    margin-right: auto;
+	margin-left: auto;
+	margin-top:s(6);
+	margin-bottom:s(6);
 }
 
 section {
@@ -71,6 +79,8 @@ footer {
 		&.bg {
 			padding-top: s(10);
 			padding-bottom: s(10);
+			margin-left:-5vw;
+			width: 100vw;
 		}
 	}
 }

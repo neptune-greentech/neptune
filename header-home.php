@@ -2,11 +2,11 @@
 <html <?php language_attributes(); ?>>
 
 <head>
-    <meta charset="<?php bloginfo( 'charset' ); ?>">
+    <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Neptune - <?php the_title(); ?></title>
-    <?php wp_head() ?>
+    <?php wp_head(); ?>
 </head>
 
 <body>
@@ -18,7 +18,7 @@
 
 			<p><?php bloginfo('description'); ?></p>
 			<h1><?php bloginfo('name'); ?></h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non sapien tincidunt, suscipit metus sed, hendrerit mi. Ut commodo tristique.</p>
+			<p><?php echo get_theme_mod('neptune_homepage_header_paragraph'); ?></p>
 
 		</div>
 	</header>

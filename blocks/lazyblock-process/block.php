@@ -1,4 +1,4 @@
-<section class="process bg">
+<section class="process bg" style="background-image:url('<?php echo $attributes['process_image']['url']; ?>')">
     <div class="container">
 
         <div class="bloc">

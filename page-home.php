@@ -1,23 +1,25 @@
 <?php
 
 /**
- * Template Name: page-home
+ * Template Name: page-home.
  */
-
 ?>
 
 <?php get_header('home'); ?>
 
-<?php include_once locate_template('/components/layering.php'); ?>
+<?php if (have_posts()) {
+    while (have_posts()) {
+        the_post(); ?>
 
-<?php include_once locate_template('/components/service.php'); ?>
+		<div class="container-content">
 
-<?php include_once locate_template('/components/numbers.php'); ?>
+			<?php the_content(); ?>
 
-<?php include_once locate_template('/components/gallery.php'); ?>
+		</div>
 
-<?php include_once locate_template('/components/testimonials.php'); ?>
+<?php
+    }
+} ?>
 
-<?php include_once locate_template('/components/team.php'); ?>
 
 <?php get_footer(); ?>

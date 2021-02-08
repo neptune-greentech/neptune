@@ -1,0 +1,191 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: Neptune\n"
+"POT-Creation-Date: 2021-02-08 17:04+0100\n"
+"PO-Revision-Date: 2021-02-08 17:04+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+"X-Poedit-SearchPathExcluded-1: vendor\n"
+"X-Poedit-SearchPathExcluded-2: node_modules\n"
+
+#: components/blog.php:19
+msgid "Published"
+msgstr ""
+
+#: components/blog.php:22
+msgid "Categorized as"
+msgstr ""
+
+#: components/blog.php:27
+msgid "Continue reading"
+msgstr ""
+
+#: config/customizer/colors.php:40
+msgid "Background Color"
+msgstr ""
+
+#: config/customizer/colors.php:43
+msgid "Please select a background color"
+msgstr ""
+
+#: config/customizer/colors.php:53
+msgid "Primary Color"
+msgstr ""
+
+#: config/customizer/colors.php:56
+msgid "Please select a primary color"
+msgstr ""
+
+#: config/customizer/colors.php:66
+msgid "Dark Color"
+msgstr ""
+
+#: config/customizer/colors.php:69
+msgid "Please select a dark color"
+msgstr ""
+
+#: config/customizer/colors.php:79
+msgid "white Color"
+msgstr ""
+
+#: config/customizer/colors.php:82
+msgid "Please select a white color"
+msgstr ""
+
+#: config/customizer/colors.php:92
+msgid "gray Color"
+msgstr ""
+
+#: config/customizer/colors.php:95
+msgid "Please select a gray color"
+msgstr ""
+
+#: config/customizer/footer.php:12
+msgid "Footer"
+msgstr ""
+
+#: config/customizer/footer.php:27
+msgid "Copyright text"
+msgstr ""
+
+#: config/customizer/homepage.php:21
+msgid "Homepage header paragraph"
+msgstr ""
+
+#: config/customizer/social_networks.php:12
+msgid "Social Networks"
+msgstr ""
+
+#: config/customizer/social_networks.php:13
+msgid ""
+"Please add your social networks links. Leave empty if you don't want the "
+"social network's icon to appear."
+msgstr ""
+
+#: config/customizer/social_networks.php:27
+msgid "Facebook Link"
+msgstr ""
+
+#: config/customizer/social_networks.php:30
+#: config/customizer/social_networks.php:52
+#: config/customizer/social_networks.php:74
+#: config/customizer/social_networks.php:96
+#: config/customizer/social_networks.php:118
+msgid "https://"
+msgstr ""
+
+#: config/customizer/social_networks.php:49
+msgid "Twitter Link"
+msgstr ""
+
+#: config/customizer/social_networks.php:71
+msgid "Instagram Link"
+msgstr ""
+
+#: config/customizer/social_networks.php:93
+msgid "Tiktok Link"
+msgstr ""
+
+#: config/customizer/social_networks.php:115
+msgid "LinkedIn Link"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+#: config/editor/index.php:27
+msgid "Neptune"
+msgstr ""
+
+#: config/editor/index.php:38
+msgid "Layering"
+msgstr ""
+
+#: config/editor/index.php:208
+msgid "Our services"
+msgstr ""
+
+#: config/editor/index.php:332
+msgid "Numbers"
+msgstr ""
+
+#: config/editor/index.php:456
+msgid "Gallery"
+msgstr ""
+
+#: config/editor/index.php:565
+msgid "Testimonials"
+msgstr ""
+
+#: config/editor/index.php:689
+msgid "Team"
+msgstr ""
+
+#: config/editor/index.php:974
+msgid "Process"
+msgstr ""
+
+#: config/editor/index.php:1061
+msgid "Partners"
+msgstr ""
+
+#: config/editor/index.php:1170
+msgid "Places"
+msgstr ""
+
+#: config/menus.php:5
+msgid "Main Menu"
+msgstr ""
+
+#: config/menus.php:6
+msgid "Secondary Menu"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "A green wordpress theme."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Kairos Agency"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://www.kairos-agency.com/"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "page-home."
+msgstr ""
