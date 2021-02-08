@@ -1,13 +1,13 @@
 <div align="center">
 
-![alt text](https://demo.neptune-green.tech/wp-content/themes/neptune/dist/images/logo-neptune.png "Logo Title Text 1")
+![neptune](https://demo.neptune-green.tech/wp-content/themes/neptune/dist/images/logo-neptune.png "Logo Title Text 1")
 
 </div>
 
 Since a lot of people is using wordpress, and concidering our ecological ideology, we want to provide to people a way to reduce their carbon footprint.
 
 - [Theme](#theme)
-	- [Page editor](#page-editor)
+	- [Customizer](#page-editor)
 - [Development](#development)
 	- [Config](#config)
 		- [Blog](#blog)
@@ -29,18 +29,23 @@ It allows you to benefit from a site whose pages will have a reduced carbon foot
 
 We hope some people will help us improving this theme because carbon footprint is also a teamwork.
 
-## Customizer
+## Theme
 
-### Homepage
+![neptune theme](https://kairos-agency.com/neptune-theme.png)
+
+
+### Customizer
+
+#### Homepage
 The paragraph of the homepage page can be fill in the homepage section of the customizer
 
-### Colors
+#### Colors
 You can change the 4 colors of the theme via the colors menu of the customizer
 
-### Social Networks
+#### Social Networks
 You can fill in the links to your social networks in the social networks section of the customizer
 
-### Footer
+#### Footer
 You can change the footer text
 
 
