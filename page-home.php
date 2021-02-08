@@ -6,9 +6,7 @@
 
 ?>
 
-<?php get_header(); ?>
-
-<?php include_once locate_template('/components/hero-full.php'); ?>
+<?php get_header('home'); ?>
 
 <?php include_once locate_template('/components/layering.php'); ?>
 

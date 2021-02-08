@@ -3,6 +3,7 @@ const
 	MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 var config = {
+	mode: 'production',
 	module: {
 		rules: [
 			{
@@ -26,14 +27,13 @@ var config = {
 				options: {
 					presets: ['@babel/preset-env', '@babel/preset-react']
 				}
-			}
+			},
 		],
 	},
 	resolve: {
 		extensions: ["*", ".js", ".jsx"]
 	},
 };
-
 
 var configGeneral = Object.assign({}, config, {
 	name: "configGeneral",
@@ -65,4 +65,37 @@ var customCta = Object.assign({}, config, {
 	]
 });
 
-module.exports = [configGeneral, customCta];
+var heroFull = Object.assign({}, config, {
+	name: "heroFull",
+	entry: './src/scripts/editor/heroFull.js',
+	output: {
+		filename: './scripts/editor/heroFull.js',
+		path: path.resolve('dist')
+	},
+	plugins: [
+		new MiniCssExtractPlugin({
+			filename: './styles/editor/heroFull.css'
+		})
+	]
+});
+
+var heroClassic = Object.assign({}, config, {
+	name: "heroClassic",
+	entry: './src/scripts/editor/heroClassic.js',
+	output: {
+		filename: './scripts/editor/heroClassic.js',
+		path: path.resolve('dist')
+	},
+	plugins: [
+		new MiniCssExtractPlugin({
+			filename: './styles/editor/heroClassic.css'
+		})
+	]
+});
+
+module.exports = [
+	configGeneral,
+	customCta,
+	heroFull,
+	heroClassic
+];

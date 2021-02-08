@@ -13,10 +13,12 @@
 	<?php include_once locate_template('/components/bar.php'); ?>
     <?php include_once locate_template('/components/nav.php'); ?>
 
-	<header class="hero hero-classic">
+	<header class="hero hero-full">
 		<div class="container hero_container">
 
-			<h1><?php wp_title(null); ?></h1>
+			<p><?php bloginfo('description'); ?></p>
+			<h1><?php bloginfo('name'); ?></h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non sapien tincidunt, suscipit metus sed, hendrerit mi. Ut commodo tristique.</p>
 
 		</div>
 	</header>
