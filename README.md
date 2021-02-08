@@ -2,6 +2,7 @@
 
 ![neptune](https://demo.neptune-green.tech/wp-content/themes/neptune/dist/images/logo-neptune.png "Logo Title Text 1")
 
+
 </div>
 
 Since a lot of people is using wordpress, and concidering our ecological ideology, we want to provide to people a way to reduce their carbon footprint.
@@ -21,6 +22,9 @@ Since a lot of people is using wordpress, and concidering our ecological ideolog
 
 ## [About Neptune](https://neptune-green.tech)
 
+
+![neptune theme](https://kairos-agency.com/neptune-theme.png)
+
 We do not see ourselves as experts but rather as scouts who want a cleaner world.
 
 This optimization of Wordpress and theme is designed based on green tech principles.
@@ -31,8 +35,7 @@ We hope some people will help us improving this theme because carbon footprint i
 
 ## Theme
 
-![neptune theme](https://kairos-agency.com/neptune-theme.png)
-
+![neptune theme](https://kairos-agency.com/neptune-theme-2.png)
 
 ### Customizer
 
