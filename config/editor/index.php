@@ -20,7 +20,6 @@ function neptune_lzb_url($url)
 }
 
 // ADD NEPTUNE CATEGORY
-
 function neptune_controls_categories($categories)
 {
     // Add new control category "Neptune"
@@ -28,10 +27,13 @@ function neptune_controls_categories($categories)
 
     return $categories;
 }
-
 add_filter('lzb/controls/categories', 'neptune_controls_categories');
 
-// dEFINE DEFAULT BLOCKS OF NEPTUNE THEME
+/*
+ *  LAZY BLOCKS
+ *  Check Lazy blocks documentation for more informations
+ *  https://lazyblocks.com/documentation/getting-started/
+ */
 if (function_exists('lazyblocks')) {
     lazyblocks()->add_block([
         'id' => 37,
