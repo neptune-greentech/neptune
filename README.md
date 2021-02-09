@@ -5,7 +5,7 @@
 
 </div>
 
-Since a lot of people is using wordpress, and concidering our ecological ideology, we want to provide to people a way to reduce their carbon footprint.
+Since a lot of people is using wordpress, and considering our ecological ideology, we want to provide people a way to reduce their carbon footprint, without changing their CMS.
 
 - [Theme](#theme)
 	- [Customizer](#page-editor)
@@ -40,16 +40,16 @@ We hope some people will help us improving this theme because carbon footprint i
 ### Customizer
 
 #### Homepage
-The paragraph of the homepage page can be fill in the homepage section of the customizer
+The paragraph of the homepage page can be filled in the customizer's homepage section
 
 #### Colors
-You can change the 4 colors of the theme via the colors menu of the customizer
+You can change the 4 colors of the theme via the customizer's colors menu
 
 #### Social Networks
-You can fill in the links to your social networks in the social networks section of the customizer
+You can fill in the links to your social networks in the customizer's social networks section
 
 #### Footer
-You can change the footer text
+You can change the footer text in the customizer's footer section
 
 
 ## Development
@@ -108,7 +108,7 @@ function neptune_customizer_options( $wp_customize ) {
 }
 ```
 
-> *Please refere to the [Customizer Objects](https://developer.wordpress.org/themes/customize-api/customizer-objects/) section of the official Wordpress documentation if needed.*
+> *Please refer to the [Customizer Objects](https://developer.wordpress.org/themes/customize-api/customizer-objects/) section of the official Wordpress documentation if needed.*
 
 
 ##### Controls linked to the css
@@ -141,7 +141,7 @@ $neptuneCustomVars = [
 
 > *Note that we are setting the value of `--color-background` by passing the ID of the control we declared before to the [`get_theme_mod()`](https://developer.wordpress.org/reference/functions/get_theme_mod/) method*.
 
-Under the hood, the `bundle.js` recieve an object of that array and the `NeptuneCustomizer.js` class loop through that object to update the css var defined in the `:root` pseudo-class in `src/scss`.
+Under the hood, the `bundle.js` receive an object of that array and the `NeptuneCustomizer.js` class loop through that object to update the css var defined in the `:root` pseudo-class in `src/scss`.
 
 ```css
 /* ./src/styles/index.scss */
@@ -153,7 +153,7 @@ Under the hood, the `bundle.js` recieve an object of that array and the `Neptune
 
 #### Editor
 
-The theme is embeding the Lazy blocks plugin.
+The theme is embedding the Lazy blocks plugin.
 The Lazy blocks file are in the `vendor\lazy-blocks` folder.
 
 The block templates of the Neptune theme are defined in the `config\editor\index.php`. If you need to add or remove blocks feel free to check the [lazy blocks documentation](https://lazyblocks.com/documentation/getting-started/).
@@ -161,8 +161,8 @@ The block templates of the Neptune theme are defined in the `config\editor\index
 
 
 > #### why not ACF ?
-> We really think ACF is a powerfull tool, but since the goal of this theme is to be as green as it can, we decided to not got with ACF.
->Lazy blocks is a good compromise, since it's a pretty small plugin, the only requests to create blocks are done in the admin side, and it has as much as feature than ACF.
+> We really think ACF is a powerful tool, but since the goal of this theme is to be as green as it can, we decided not to go with ACF.
+> Lazy blocks is a good compromise, since it's a pretty small plugin, the only requests to create blocks are done in the admin side, and it has as many features as ACF.
 
 #### Styles and scripts
 
