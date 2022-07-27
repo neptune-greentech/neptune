@@ -1,27 +1,30 @@
 @font-face {
-    font-family: 'sf-pro-display-regular';
-    src: url('http://localhost/neptune/wp-content/themes/neptune/src/fonts/sf-pro-display-regular.otf') format('opentype'),;
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
+	font-family: "sf-pro-display-regular";
+	src: url("http://localhost:8888/neptune/wp-content/themes/neptune/src/fonts/sf-pro-display-regular.otf")
+		format("opentype");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-    font-family: 'sf-pro-display-light';
-    src: url('http://localhost/neptune/wp-content/themes/neptune/src/fonts/sf-pro-display-light.otf') format('opentype'),;
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
+	font-family: "sf-pro-display-light";
+	src: url("http://localhost:8888/neptune/wp-content/themes/neptune/src/fonts/sf-pro-display-light.otf")
+		format("opentype");
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-    font-family: 'sf-pro-display-medium';
-    src: url('http://localhost/neptune/wp-content/themes/neptune/src/fonts/sf-pro-display-medium.otf') format('opentype'),;
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
+	font-family: "sf-pro-display-medium";
+	src: url("http://localhost:8888/neptune/wp-content/themes/neptune/src/fonts/sf-pro-display-medium.otf")
+		format("opentype");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
 }
 
-$f-light: 'sf-pro-display-light', sans-serif;
-$f-regular: 'sf-pro-display-regular', sans-serif;
-$f-medium: 'sf-pro-display-medium', sans-serif;
+$f-light: "sf-pro-display-light", sans-serif;
+$f-regular: "sf-pro-display-regular", sans-serif;
+$f-medium: "sf-pro-display-medium", sans-serif;
