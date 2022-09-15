@@ -1,52 +1,187 @@
-label {
-    display: inline-block;
-    margin-bottom: s(1);
-}
-
-input {
-    width: 100%;
-    padding: s(2);
-    background: var(--color-white);
-    border: 1px solid var(--color-primary);
-    outline: none;
-    font-size: f(1.4);
-    font-family: $f-light;
-    &:focus {
-        border: 1px solid var(--color-dark);
+#contact{
+    h2{
+        font-weight: 400;
     }
-    &::placeholder {
-        font-size: f(1.4);
-        color: var(--color-gray);
-        font-family: $f-light;
+    label {
+        display: inline-block;
+        margin-bottom: s(1);
     }
-}
-
-textarea {
-    width: 100%;
-    padding: s(2);
-    background: var(--color-white);
-    border: 1px solid var(--color-primary);
-    outline: none;
-    font-size: f(1.4);
-    font-family: $f-light;
-    height: 10rem;
-    resize: none;
-    line-height: 1.4;
-    &:focus {
-        border: 1px solid var(--color-dark);
+    input {
+        width: 100%;
+        font-weight: 400;
+        padding: s(2) 0;
+        background: transparent;
+        border: 0;
+        margin-bottom: 0;
+        border-bottom: 2px solid rgba(48, 42, 42, .2);
+        outline: none;
+        color: #444A5E;
+        @media (min-width: $from_medium) {
+            margin-bottom: s(2);
+            padding: s(2) 0;
+        } 
+        &::-webkit-input-placeholder, &:-moz-placeholder, &::-moz-placeholder, &:-ms-input-placeholder, &::-ms-input-placeholder {
+            @media (min-width: $from_medium) {
+                font-size: f(1);
+            }
+            font-size: f(1.2);
+            color: #444A5E;
+        }
+        &::placeholder {
+          color: #444A5E;
+          font-size: f(1.2);
+          @media (min-width: $from_medium) {
+            font-size: f(1);
+        }
+      }
     }
-    &::placeholder {
-        font-size: f(1.4);
-        color: var(--color-gray);
-        font-family: $f-light;
-    }   
-}
-
-form {
-    .col-1 {
-        margin-top: s(2);
-    }
-    input[type="submit"] {
+    .wpcf7-submit {
+        background-color: var(--color-blue) !important;
+        padding: s(1) s(3);
+        font-weight: 500;
+        border-radius: 5px;
+        border: none;
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
         margin-top: s(4);
+        color: var(--color-white);
+    }
+    textarea {
+        width: 100%;
+        font-weight: 400;
+        padding: s(1) 0;
+        border: 0;
+        background: transparent;
+        border-bottom: 1px solid #302A2A98;
+        outline: none;
+        font-size: f(1.2);
+        height: s(12);
+        resize: none;
+        line-height: 1.4;
+        font-family: 'Inter', sans-serif;
+        @media (min-width: $from_medium) {
+            font-size: f(1);
+        }
+        &::placeholder {
+            color: #444A5E;
+            font-weight: 400 !important;
+        }
+        &::-webkit-input-placeholder, &:-moz-placeholder {
+            font-weight: 400;
+            font-size: f(1);
+            color: #444A5E;
+        }
+        &::-moz-placeholder {
+            font-weight: 400;
+            font-size: f(1);
+            color: #444A5E;
+            font-weight: 400;
+        }
+        &:-ms-input-placeholder, &::-ms-input-placeholder, &::placeholder {
+            font-weight: 400;
+            font-size: f(1);
+            color: #444A5E;
+        }
+    }
+    form {
+        margin-top: s(2);
+        .col-1 {
+            margin-top: s(2);
+        }
+        input[type="submit"] {
+            margin-top: s(4);
+        }
+        .col-2{
+            @media (min-width: $from_medium) {
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: s(4);
+            }
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 0;
+    
+        }
+        .obligatoire{
+            margin-top: s(2);
+            color: #444A5E;
+        }
+        .col:not(:last-of-type) {
+            margin-bottom: 0;
+        }
+    }    
+}
+
+.search-form{
+    label{
+        margin: 0;
+        color: white !important;
+        font-size: f(1.1);
+        width: 100%;
+        input{
+            &::placeholder {
+                color: white;
+                font-size: f(1.1);
+                font-weight: 400 !important;
+            }
+        }
+    }
+    .search-field {
+        background-color: transparent;
+        background-image: url(http://localhost:8888/acloud/wp-content/themes/neptune/src/images/icon-search-white.svg);
+        background-position: 5px center;
+        background-repeat: no-repeat;
+        border: none;
+        cursor: pointer;
+        height: 40px;
+        padding: 0 0 0 s(1);
+        position: relative;
+        padding-left: s(2);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        width: 100%;
+        color: white !important;
+        font-size: f(1.1);
+    }
+    .search-submit{
+        display: none;
     }
 }
+
+.myhiddenthing {
+    background: var(--color-blue);
+    color: #fff;
+    position: absolute;
+    top: -100vw;
+    width: 100vw;
+    right: 0;
+    left:0;
+    box-sizing: border-box;
+    padding: s(2);
+    transition: all .8s ease-out;
+    opacity: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    form{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: s(1);
+        align-items: center;
+        margin:auto s(3);
+        @media (min-width: $from_medium) {
+            margin:auto s(6);
+        }
+    }
+}
+
+.myhiddenthing.active {
+    position: absolute;
+    top: 0;
+    opacity: 1;
+}
+

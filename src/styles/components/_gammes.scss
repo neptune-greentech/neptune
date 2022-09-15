@@ -1,0 +1,60 @@
+.gammes{
+    .subtitle{
+        text-align: center;
+    }
+	h2 {
+        margin: s(3) auto s(8);
+		text-align: center;
+        font-weight: 400;
+        max-width: s(41);
+        color: #273841;
+    }
+    &_slider {
+        position: relative;
+        height: s(26);
+        &_inner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            gap: s(1);
+            pointer-events: none;
+        }
+    }
+    &_slide {
+        width: 50rem;
+        span{
+            border-bottom: 1px solid rgba(161, 164, 175, 0.6);
+            padding-bottom: s(.5);
+            width: 100%;
+            color: #A1A4AF;
+            font-weight: 400;
+        }
+        .gammes_bloc{
+            margin-top: s(4);
+            display: flex;
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+            gap: s(1);
+            .gammes_content{
+                padding: s(4) s(2) s(4);
+                text-align: center;
+                display: block;
+                background-color: RGBA(239,239,248,0.40);
+                img{
+                    width: s(6);
+                    height: auto;
+                }
+                p{
+                    margin-top: s(2);
+                    font-size: s(.85);
+                    font-weight: 400;
+                    color: #575C69;
+                }
+            }
+        }
+    }
+}

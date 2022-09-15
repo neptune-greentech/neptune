@@ -13,3 +13,5 @@ include_once locate_template('/config/editor/index.php');
 include_once locate_template('/config/menus.php');
 
 include_once locate_template('/config/theme_support.php');
+
+add_theme_support('html5', array('search-form'));

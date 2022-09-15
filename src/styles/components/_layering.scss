@@ -20,6 +20,68 @@
     }
 }
 
+.layering_center{
+    position: relative;
+    text-align: center;
+    .container{
+        p {
+            margin: auto;
+            opacity: 1;
+            color: #273841;
+            margin-top: s(3);
+            @media all and (min-width: $from-medium) {
+                font-size: f(2.5);
+                max-width: s(62);
+            }
+        }
+        ul{
+            margin: s(2) 0;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            @media all and (min-width: $from-medium) {
+                margin: s(5) 0;
+            }
+            li{
+                &:first-child{
+                    span{
+                        display: none;
+                    }
+                }
+                span{
+                    margin-right: s(1);
+                    border-radius: 50%;
+                    height: 5px;
+                    width: 5px;
+                    display: block;
+                    background-color: var(--color-blue);
+                    @media all and (min-width: $from-medium) {
+                        margin-right: s(3);
+                    }
+                }
+                color:var(--color-blue);
+                font-weight: 600;
+                position: relative;
+                display:flex;
+                align-items: center;
+                &:not(:last-of-type) {
+                    margin: 0 s(1) 0 0;
+                    @media all and (min-width: $from-medium) {
+                        margin: 0 s(4) 0 0;
+                    }
+                }
+            }
+        }
+        .bg_image{
+            img{
+                object-fit: cover;
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
+
 @media all and (min-width: $from-medium) {
     .layering {
         .cols {
@@ -51,5 +113,28 @@
                 }
             }
         }
+    }
+}
+
+.home{
+    .layering_center{
+        .bg_image{
+            position: relative;
+            &::before{
+                content: "";
+                display: block;
+                background-image:url(http://localhost:8888/acloud//wp-content/themes/neptune/src/images/nuage.svg) ;
+                width: s(24);
+                height: s(15);
+                position: absolute;
+                -moz-background-size: contain;
+                background-size: contain;
+                background-repeat: no-repeat;
+                top: s(-9);
+                left: s(-15);
+                z-index: -1;
+            }
+        }
+        
     }
 }

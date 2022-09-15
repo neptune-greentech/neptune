@@ -1,66 +1,418 @@
 .hero {
     width: 100vw;
-    background: var(--color-primary);
     padding: s(6) 0;
+    position: relative;
+
     &-full {
-        h1 {
-            margin: s(0.5) 0 s(1);
+        padding: s(3) 0;
+        &::before{
+            content: "";
+            display: block;
+            background-image:url(http://localhost:8888/acloud//wp-content/themes/neptune/src/images/nuage.svg) ;
+            width: s(20);
+            height: s(15);
+            position: absolute;
+            background-size: contain;
+            background-repeat: no-repeat;
+            top:s(4);
+            right: s(-12);
+            z-index: -1;
         }
-    }
-    &-article {
-        padding: s(6) 0 0;
-        position: relative;
-        p {
-            a {
-                display: inline;
-                text-decoration: underline;
+        .container{
+            position: relative;
+        }
+        h1 {
+            margin: s(2) 0 s(2);
+            text-align: center;
+            color: #22343D;
+            span{
+                position: relative;
+                display: inline-grid;
+                &::after{
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    bottom: s(-1.5);
+                    height: 100%;
+                    width: 100%;
+                    background-position: bottom;
+                    background-repeat: no-repeat;
+                    background-image: url(http://localhost:8888/acloud/wp-content/themes/neptune/src/images/line.svg);
+                }
+            } 
+        }
+        .bg_acloud{
+            img{
+                width: 100%;
+                height: auto;
+            }
+            &::before{
+                content:"";
+                background-image:url(http://localhost:8888/acloud//wp-content/themes/neptune/src/images/after-cloud.jpg) ;
+                width: auto;
+                height: s(24);
+                position: absolute;
+                background-repeat: no-repeat;
+                right: 0;
+                left: 0;
+                background-size: contain;
+                background-position: center;
+                z-index: -1;
+                top: s(9);
+            }
+            .btn{
+                width: s(18);
+                right: s(2.5);
+                position: absolute;
             }
         }
+    }
+
+    &-classic{
+        padding:0 0 s(4);
+        &::before{
+            content: "";
+            display: block;
+            background-image:url(http://localhost:8888/acloud//wp-content/themes/neptune/src/images/nuage.svg) ;
+            width: s(10);
+            height: s(5);
+            position: absolute;
+            -moz-background-size: contain;
+            background-size: contain;
+            background-repeat: no-repeat;
+            top: s(-3);
+            right: s(-4);
+        }
+        .container{
+            position: relative;
+            h1{
+                margin: s(3) 0 s(2);
+                text-align: center;
+                span{
+                    position: relative;
+                    display: inline-grid;
+                    &::after{
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        bottom: s(-2.5);
+                        height: 100%;
+                        width: 100%;
+                        background-position: bottom;
+                        background-repeat: no-repeat;
+                        background-image: url(http://localhost:8888/acloud/wp-content/themes/neptune/src/images/line.svg);
+                    }
+                }
+            }
+        }
+        .bg_title{
+            margin-top: s(4);
+        }
+        .bg_acloud{
+            img{
+                width: 100%;
+                height: auto;
+            }
+            .btn{
+                width: s(18);
+                right: s(2.5);
+                bottom: s(-3);
+                position: absolute;
+            }
+        }
+    }
+
+    &-besoin{
+        padding:0 0 s(4);
+        position: relative;
+        &::before{
+            content: "";
+            display: block;
+            background-image:url(http://localhost:8888/acloud//wp-content/themes/neptune/src/images/nuage.svg) ;
+            width: s(14);
+            height: s(5);
+            position: absolute;
+            -moz-background-size: contain;
+            background-size: contain;
+            background-repeat: no-repeat;
+            top: s(5);
+            left: s(-2.5);
+            z-index: -1;
+        }
+        &::after{
+            content: "";
+            display: block;
+            background-image:url(http://localhost:8888/acloud//wp-content/themes/neptune/src/images/nuage.svg) ;
+            width: s(24);
+            height: s(15);
+            position: absolute;
+            -moz-background-size: contain;
+            background-size: contain;
+            background-repeat: no-repeat;
+            bottom: s(25);
+            right: s(-7);
+            z-index: -1;
+        }
+        .container{
+            position: relative;
+            p{
+                font-weight: 500;
+                margin-top: s(3);
+                text-align: center;
+                span{
+                    position: relative;
+                    display: inline-grid;
+                    &::after{
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        bottom: s(-0.8);
+                        height: 100%;
+                        width: 100%;
+                        background-size: 100%;
+                        background-position: bottom;
+                        background-repeat: no-repeat;
+                        background-image: url(http://localhost:8888/acloud/wp-content/themes/neptune/src/images/line.svg);
+                    }
+                }
+            }
+            h1{
+                margin: s(3) 0 0;
+                text-align: center;
+                color: #444A5E;
+                font-family: "Fraunces-72pt-Black";
+                font-weight: 600;
+                max-width: s(52);
+            }
+            .introduction{
+                margin-top: s(2);
+                color: #575C69;
+                text-align: center;
+                max-width: s(30);
+                font-weight: 400;
+            }
+        }
+        .bg_picture{
+            margin-top: s(5);
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    &-page{
+        padding: 0;
+        .container{
+            .content_page{
+                background-image: url(http://localhost:8888/acloud//wp-content/themes/neptune/src/images/bg_page.png);
+                display: flex;
+                height: 100%;
+                width: 100%;
+                background-size: 100%;
+                background-repeat: no-repeat;
+                background-position: center;
+                justify-content: center;
+                align-items: center;
+                margin: s(1) auto;
+                min-height: s(10);
+                h1{
+                    text-align: center;
+                    color: #444A5E;
+                    font-family: "Fraunces-72pt-Black";
+                    font-weight: bold;
+                    max-width: s(52);
+                }
+            }
+
+        }
+    }
+
+    &-article {
+        padding: s(3) 0 0;
+        position: relative;
+        &::before{
+            content: "";
+            display: block;
+            background-image:url(http://localhost:8888/acloud//wp-content/themes/neptune/src/images/nuage.svg) ;
+            width: s(14);
+            height: s(5);
+            position: absolute;
+            -moz-background-size: contain;
+            background-size: contain;
+            background-repeat: no-repeat;
+            top: s(5);
+            left: s(-2.5);
+            z-index: -1;
+        }
+        &::after{
+            content: "";
+            display: block;
+            background-image:url(http://localhost:8888/acloud//wp-content/themes/neptune/src/images/nuage.svg) ;
+            width: s(24);
+            height: s(15);
+            position: absolute;
+            -moz-background-size: contain;
+            background-size: contain;
+            background-repeat: no-repeat;
+            bottom: s(25);
+            right: s(-7);
+            z-index: -1;
+        }
+        p {
+            margin-bottom: s(4);
+            font-weight: 500;
+            font-size: f(1.2);
+        }
+        .introduction{
+            color: #575c69;
+            text-align: center;
+            max-width: s(30);
+            font-weight: 400;
+            font-size: f(1);
+            margin-bottom: s(6);
+        }
         h1 {
-            font-size: f(4.2);
-            margin: s(0.5) 0 s(6);
+            text-align: center;
+            font-size: f(2.5);
+            margin-bottom: s(2);
+            color: #444A5E;
+            font-family: "Fraunces-72pt-Black";
+            font-weight: bold;
+            max-width: s(60);
         }
         img {
-			width: 100%;
-			height: 100%;
-			max-height: 40rem;
-            max-width: 50rem;
+            width: 100%;
+            height: 100%;
+            max-height: s(30);
+            border-radius: 10px;
             margin-right: auto;
             margin-left: auto;
-			position: relative;
-			object-fit: cover;
+            position: relative;
+            -o-object-fit: cover;
+            object-fit: cover;
             z-index: 1;
         }
-        span {
-            width: 100%;
-            background: var(--color-background);
-            position: absolute;
-            bottom: 0;
-            left: 0;
+        span{
+            position: relative;
+            display: inline-grid;
+            &::after{
+                content: "";
+                display: block;
+                position: absolute;
+                bottom: s(-0.5);
+                height: 100%;
+                width: 100%;
+                background-size: s(8);
+                background-position: bottom;
+                background-repeat: no-repeat;
+                background-image: url(http://localhost:8888/acloud/wp-content/themes/neptune/src/images/line.svg);
+            }
         }
     }
 }
 
 @media all and (min-width: $from-medium) {
     .hero {
+        &-full {
+            min-height: s(40);
+        }
+    }
+}
+
+
+@media all and (min-width: $from-large) {
+    .hero {
         text-align: center;
+
         &-full {
             padding: 0;
-            min-height: 40rem;
+            min-height: s(60);
             h1 {
-                margin: s(-1) 0 s(3);
+                margin: s(3) 0 s(3);
+                line-height: s(4);
             }
             p {
                 &:last-of-type {
-                    max-width: 24rem;
+                    max-width: s(24);
                     margin-right: auto;
                     margin-left: auto;
                 }
             }
+            .bg_acloud{
+                &::before{
+                    content:"";
+                    top: s(14);
+                    height: s(60);
+                }
+                .btn{
+                    position: absolute;
+                    right: s(2.5);
+                    bottom: s(1);
+                }
+            }
         }
+
         &-classic {
-            padding: s(6) 0;
+            padding: 0;
+            &::before{
+                content: "";
+                display: block;
+                background-image:url(http://localhost:8888/acloud//wp-content/themes/neptune/src/images/nuage.svg) ;
+                width: s(20);
+                height: s(15);
+                position: absolute;
+                background-size: contain;
+                background-repeat: no-repeat;
+                top: s(-3);
+                right: s(-9);
+                z-index: -1;
+            }
+            h1{
+                font-size: 2.5vw;
+            }
+            .bg_acloud{
+                margin-top: s(6);
+                .btn{
+                    position: absolute;
+                    right: s(2.5);
+                }
+            }
+            .bg_title{
+                margin-top: s(8);
+            }
+            .solution{
+                margin-top: s(4);
+            }
         }
+
+        &-besoin {
+            padding: 0;
+            h1{
+                font-size: 3.5vw;
+            }
+        }
+
+        &-page{
+            padding: 0;
+            .container{
+                .content_page{
+                    min-height: s(20);
+                    margin: s(3) auto 0;
+                    h1{
+                        font-size: 3.5vw;
+                    }
+                }
+    
+            }
+        }
+
+        &-article {
+            h1{
+                font-size: f(3.5);
+            }
+        }
+        
         &_container {
             height: 100%;
             display: flex;
