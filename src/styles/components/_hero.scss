@@ -22,7 +22,7 @@
             position: relative;
         }
         h1 {
-            margin: s(2) 0 s(2);
+            margin: s(2) auto s(2);
             text-align: center;
             color: #22343D;
             span{
@@ -329,7 +329,7 @@
             padding: 0;
             min-height: s(60);
             h1 {
-                margin: s(3) 0 s(3);
+                margin: s(3) auto s(3);
                 line-height: s(4);
             }
             p {

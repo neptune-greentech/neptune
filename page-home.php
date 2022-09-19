@@ -90,15 +90,18 @@
                     while ( $loop0->have_posts() ) {
                         $loop0->the_post();
             { ?>
-            <div class="actu_content">
+            <a href="<?php echo the_permalink(); ?>" title="Lien vers l'article" class="actu_content">
                 <?php echo get_the_post_thumbnail();?>
                 <div>
                     <h3>
-                        <a href="<?php echo the_permalink(); ?>" title="Lien vers l'article"> <?php echo the_title(); ?></a>
+                       <?php echo the_title(); ?>
                     </h3> 
                     <span><?php echo get_the_date(); ?></span>
+                    <div class="card_text">
+                        <?php echo the_excerpt(); ?>
+                    </div>
                 </div>
-            </div>
+            </a>
             <?php
             } }
                 } else {

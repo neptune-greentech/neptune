@@ -80,10 +80,29 @@
     .col-3{
         grid-gap: s(1);
         .actu_content{
+            overflow: hidden;
+            max-height: s(31);
             &:not(:last-of-type){
                 margin-bottom: s(2);
                 @media all and (min-width: $from-medium) {
                     margin-bottom: 0;
+                }
+            }
+            &:hover{
+                .card_text{
+                    height: auto;
+                    display: inline-block;
+                    p{
+                        opacity: 1;
+                    }
+                }
+                img{
+                    top: 0;
+                    transform: translateY(-80px);
+                }
+                >div{
+                    top: 0;
+                    transform: translateY(-85px);
                 }
             }
             img{
@@ -91,13 +110,19 @@
                 height: auto;
                 max-height: s(15);
                 object-fit: cover;
+                transform: translateY(0);
+                transition: transform 0.2s ease-in-out;
                 @media all and (min-width: $from-medium) {
                     max-height: 100%;
                 }
             }
             >div{
                 background-color: white;
-                padding: s(3);
+                padding: s(3) s(3) s(2) s(3);
+                overflow: hidden;
+                position: relative;
+                transform: translateY(0);
+                transition: transform 0.2s ease-in-out;
                 h3{
                     font-weight: 600;
                     max-width: s(19);
@@ -106,6 +131,20 @@
                 span{
                     font-size: f(.9);
                     color: #C8C8C8;
+                    font-weight: 500;
+                }
+                .card_text{
+                    display: flex;
+                    padding-top: s(1);
+                    flex-direction: column;
+                    transform: translateY(0);
+                    transition: transform 0.2s ease-in-out;
+                    p{
+                        max-height: 0;
+                        color: var(--color-gray);
+                        opacity: 0;
+                        transition : opacity .3s ease, max-height .2s;
+                    }
                 }
             }
         }
