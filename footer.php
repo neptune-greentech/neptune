@@ -7,36 +7,18 @@
                     </a>
                 </div>
                 <div>
-                    <p>Nos solutions</p>
-                    <ul>
-                        <li>Nuages</li>
-                        <li>Cloisons</li>
-                        <li>Totem vortex</li>
-                        <li>Acoustik Rain</li>
-                    </ul>
+                    <?php dynamic_sidebar('Sidebar footer lien 1'); ?>
                 </div>
                 <div>
-                    <p>Vos besoins</p>
-                    <ul>
-                        <li>Collectivités</li>
-                        <li>Entreprises avec bureaux</li>
-                        <li>Restaurants</li>
-                        <li>Ateliers industriels</li>
-                    </ul>
+                    <?php dynamic_sidebar('Sidebar footer lien 2'); ?>
                 </div>
                 <div>
-                    <p>Acloud</p>
-                    <ul>
-                        <li>Notre concept</li>
-                        <li>L'équipe</li>
-                        <li>Nos engagements</li>
-                        <li>Garanties</li>
-                    </ul>
+                    <?php dynamic_sidebar('Sidebar footer lien 3'); ?>
                 </div>
             </div>
         </div>
         <div class="container footer_bottom">
-            <p>© 2022 Acloud® Copyright - <a>Epicure Conseils</a> - <a>Politique de confidentialités</a> - <a>Mentions légales</a></p>
+            <p>© 2022 Acloud® Copyright - <a href="<?php echo bloginfo('url'); ?>/epicure-conseils/">Epicure Conseils</a> - <a href="<?php echo bloginfo('url'); ?>/politique-de-confidentialite/">Politique de confidentialités</a> - <a href="<?php echo bloginfo('url'); ?>/mentions-legales">Mentions légales</a></p>
         </div>  
     </footer>
 

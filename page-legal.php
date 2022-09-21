@@ -15,7 +15,7 @@
     </div>
 </header>
 
-<section>
+<section class="layout-text">
     <div class="container-content">
         <h2>Fatigue, énervement, pleurs… dans une crèche, bien souvent, l’espace est compté, et un enfant a bien du mal à récupérer, même pendant les temps de repos. </h2>  
         <p>Installée dans une crèche ou une école, l’isolation acoustique A-Cloud® apaisera non seulement les oreilles, mais aussi les yeux des enfants. 

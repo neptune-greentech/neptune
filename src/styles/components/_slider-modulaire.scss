@@ -58,6 +58,18 @@
             overflow: hidden;
             height: 35rem;
         }
+        .embla__slide__button{
+            position: absolute;
+            bottom: s(-1);
+            left: 0;
+            a{
+                border-top-right-radius: 0;
+                border: none;
+                color: #444A5E !important;
+                font-weight: 600 !important;
+                width: s(15);
+            }
+        }
         .embla__slide__img {
             position: absolute;
             width: 100%;

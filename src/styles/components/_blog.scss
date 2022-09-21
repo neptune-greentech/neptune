@@ -79,9 +79,11 @@
     }
     .col-3{
         grid-gap: s(1);
+
         .actu_content{
-            overflow: hidden;
+            // overflow: hidden;
             max-height: s(31);
+            position: relative;
             &:not(:last-of-type){
                 margin-bottom: s(2);
                 @media all and (min-width: $from-medium) {
@@ -89,6 +91,9 @@
                 }
             }
             &:hover{
+                button{
+                    opacity: 1;
+                }
                 .card_text{
                     height: auto;
                     display: inline-block;
@@ -141,11 +146,26 @@
                     transition: transform 0.2s ease-in-out;
                     p{
                         max-height: 0;
-                        color: var(--color-gray);
+                        font-size: f(.9);
+                        color: rgba(68, 74, 94, 0.5);
                         opacity: 0;
                         transition : opacity .3s ease, max-height .2s;
                     }
                 }
+            }
+            button{
+                overflow: overlay;
+                position: absolute;
+                bottom: s(-1.5);
+                border-radius: 10px;
+                max-width: s(13);
+                z-index: 1;
+                border: none;
+                right: s(1);
+                padding: s(.8) s(1);
+                opacity: 0;
+                transition: all 0.5s ease;
+                cursor: pointer;
             }
         }
     }

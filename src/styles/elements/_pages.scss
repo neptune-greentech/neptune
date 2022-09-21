@@ -90,10 +90,16 @@ footer {
 	}
 }
 
-.page-template-page-legal{
+.page-template-page-legal, 
+.layout-text{
 	h2{
 		font-weight: 400;
 		margin-bottom: s(4);
+	}
+	h3{
+		font-size: f(1.8);
+		font-weight: 300;
+		margin-top: s(2);
 	}
 	p{
 		color: #575C69;

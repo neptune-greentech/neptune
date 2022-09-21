@@ -40,12 +40,13 @@
             justify-content: center;
             gap: s(1);
             .gammes_content{
-                padding: s(4) s(2) s(4);
+                padding: s(4) s(1) s(4);
+                width: 100%;
                 text-align: center;
                 display: block;
                 background-color: RGBA(239,239,248,0.40);
                 img{
-                    width: s(6);
+                    width: s(6.5);
                     height: auto;
                 }
                 p{
