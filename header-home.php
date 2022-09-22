@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Acloud - <?php the_title(); ?></title>
     <?php wp_head(); ?>
+    <link rel="shortcut icon" href="<?php echo get_template_directory_uri() . '/src/images/favicon.png';?>" type="image/png" />
 </head>
 
 <body <?php body_class(); ?>>
