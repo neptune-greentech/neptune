@@ -149,7 +149,6 @@ if (heroOverlay) {
 /**
  * Gammes draggable
  */
-
 let
 	pressed = false,
 	startX = null,
@@ -219,7 +218,6 @@ function checkBoundary() {
 /**
  * Testimonials slider
  */
-
 document.querySelectorAll('.gallery').forEach(gallery => {
 
 	const
@@ -287,6 +285,9 @@ document.querySelectorAll('.gallery').forEach(gallery => {
 	})
 })
 
+/**
+ * Barre de recherche
+ */
 document.addEventListener('DOMContentLoaded', function() {
   
 	var myhiddenthing = document.querySelector('.myhiddenthing');
@@ -300,5 +301,4 @@ document.addEventListener('DOMContentLoaded', function() {
 	myclosebutton.onclick = function() {
 	  myhiddenthing.classList.remove('active');
 	};
-	  
 });
