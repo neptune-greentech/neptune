@@ -7,9 +7,8 @@
         grid-template-columns: repeat(2, 1fr);
         column-gap: s(1);
         row-gap: s(2);
-        padding: s(2) 5vw;
+        padding: 0;
         @media all and (min-width: $from-medium) {
-            padding: unset;
             grid-template-columns: repeat(2, 1fr);
             column-gap: s(2);
             row-gap: s(3);
@@ -59,11 +58,14 @@
             }
             >div{
                 background-color: white;
-                padding: s(3) s(3) s(2) s(3);
+                padding: s(1);
                 overflow: hidden;
                 position: relative;
                 transform: translateY(0);
                 transition: transform 0.2s ease-in-out;
+                @media all and (min-width: $from-medium) {
+                    padding: s(3) s(3) s(2) s(3);
+                }
                 h3{
                     font-weight: 600;
                     max-width: s(19);
@@ -142,8 +144,11 @@
         grid-gap: s(1);
 
         .actu_content{
-            max-height: s(31);
+            max-height: s(26.5);
             position: relative;
+            @media all and (min-width: $from-medium) {
+                max-height: s(31);
+            }
             &:not(:last-of-type){
                 margin-bottom: s(2);
                 @media all and (min-width: $from-medium) {
