@@ -8,7 +8,8 @@
     justify-content: center;
     font-weight: 500;
     font-family: 'Inter', sans-serif;
-    
+    transition: all .5s ease;
+
     &-primary {
         background: var(--color-blue);
         color: var(--color-white);
@@ -21,6 +22,10 @@
 
     svg{
         margin-left: s(2);
+    }
+
+    &:hover{
+        transform: scale(1.1);
     }
 }
 
@@ -84,9 +89,13 @@
     font-family: 'Roboto', sans-serif;
     letter-spacing: .5px;
     font-weight: 500;
+    transition: all .5s ease;
     @media all and (min-width: $from-large) {
         padding: s(1) s(2);
         min-width: s(10);
+    }
+    &:hover{
+        transform: scale(1.1);
     }
 }
 
