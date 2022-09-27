@@ -29,6 +29,7 @@
 	},
 	"dependencies": {
 		"embla-carousel": "^7.0.2",
+		"gsap": "^3.11.1",
 		"locomotive-scroll": "^4.1.4"
 	}
 }
