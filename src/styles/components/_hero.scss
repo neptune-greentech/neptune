@@ -96,6 +96,9 @@
 				span {
 					position: relative;
 					display: inline-grid;
+					&:hover::after {
+						animation-play-state: running;
+					}
 					&::after {
 						content: "";
 						display: block;
@@ -104,8 +107,10 @@
 						height: 100%;
 						width: 100%;
 						background-position: bottom;
-						background-repeat: no-repeat;
+						background-repeat: repeat-x;
 						background-image: url(http://localhost:8888/acloud/wp-content/themes/neptune/src/images/line.svg);
+						animation: move 15s linear infinite;
+						animation-play-state: paused;
 					}
 				}
 			}
@@ -117,6 +122,20 @@
 			img {
 				width: 100%;
 				height: auto;
+			}
+			span {
+				content: "";
+				background-image: url(http://localhost:8888/acloud//wp-content/themes/neptune/src/images/after-cloud.jpg);
+				width: auto;
+				height: s(24);
+				position: absolute;
+				background-repeat: no-repeat;
+				right: 0;
+				left: 0;
+				background-size: contain;
+				background-position: center;
+				z-index: -1;
+				top: s(9);
 			}
 			.btn {
 				width: s(18);
@@ -210,6 +229,8 @@
 		padding: 0;
 		.container {
 			.content_page {
+				position: relative;
+				overflow: hidden;
 				background-image: url(http://localhost:8888/acloud//wp-content/themes/neptune/src/images/bg_page.png);
 				display: flex;
 				height: 100%;
@@ -376,6 +397,10 @@
 			}
 			.bg_acloud {
 				margin-top: s(6);
+				span {
+					top: s(7);
+					height: s(30);
+				}
 				.btn {
 					position: absolute;
 					right: s(2.5);

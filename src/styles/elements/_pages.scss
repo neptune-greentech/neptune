@@ -1,6 +1,6 @@
 html {
-    font-size: $size-default;
-    @media (max-width: $to-tiny) {
+	font-size: $size-default;
+	@media (max-width: $to-tiny) {
 		font-size: $size-default;
 	}
 	@media (min-width: $from-tiny) and (max-width: $to-small) {
@@ -34,20 +34,27 @@ html {
 
 body {
 	color: var(--color-dark);
-	background-color: #FBFBFD;
+	background-color: #fbfbfd;
 	overflow-x: hidden;
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 }
 
 .container {
 	width: $container;
-    margin-right: auto;
+	margin-right: auto;
 	margin-left: auto;
+}
+
+.block_image {
+	.container {
+		position: relative;
+		overflow: hidden;
+	}
 }
 
 .container-content {
 	width: 70vw;
-    margin-right: auto;
+	margin-right: auto;
 	margin-left: auto;
 }
 
@@ -62,7 +69,7 @@ section {
 
 footer {
 	&.bg {
-		background: #FBFBFD;
+		background: #fbfbfd;
 		padding-top: s(6);
 		padding-bottom: s(6);
 	}
@@ -75,7 +82,7 @@ footer {
 		&.bg {
 			padding-top: s(8);
 			padding-bottom: s(8);
-			margin-left:-5vw;
+			margin-left: -5vw;
 			width: 100vw;
 		}
 	}
@@ -83,33 +90,32 @@ footer {
 
 .page-template-page-contact,
 .page-template-page-legal,
-.blog
-{
-	.breadcrumb{
+.blog {
+	.breadcrumb {
 		display: none;
 	}
 }
 
-.page-template-page-legal, 
-.layout-text{
-	h2{
+.page-template-page-legal,
+.layout-text {
+	h2 {
 		font-weight: 400;
 		margin-bottom: s(4);
 	}
-	h3{
+	h3 {
 		font-size: f(1.8);
 		font-weight: 300;
 		margin-top: s(2);
 	}
-	p{
-		color: #575C69;
+	p {
+		color: #575c69;
 	}
 }
 
-.page-id-144, 
-.page-id-150{
-	.hero-classic{
-		&::before{
+.page-id-144,
+.page-id-150 {
+	.hero-classic {
+		&::before {
 			display: none;
 		}
 	}
@@ -118,9 +124,9 @@ footer {
 .page-id-42,
 .page-id-44,
 .page-id-46,
-.page-id-61{
-	.hero-besoin{
-		&::after{
+.page-id-61 {
+	.hero-besoin {
+		&::after {
 			top: s(15);
 		}
 	}
