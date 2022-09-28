@@ -1,34 +1,32 @@
-@import "settings/colors";
-@import "settings/sizes";
-@import "settings/container";
-@import "settings/fonts";
+@import 'settings/colors';
+@import 'settings/sizes';
+@import 'settings/container';
+@import 'settings/fonts';
 
-@import "tools/functions";
-@import "tools/mixins";
+@import 'tools/functions';
+@import 'tools/mixins';
 
-@import "generic/reset";
+@import 'generic/reset';
 
-@import "elements/pages";
-@import "elements/headings";
-@import "elements/texts";
-@import "elements/forms";
-@import "elements/blocs";
-@import "elements/buttons";
+@import 'elements/pages';
+@import 'elements/headings';
+@import 'elements/texts';
+@import 'elements/forms';
+@import 'elements/blocs';
+@import 'elements/buttons';
 
-@import "objects/layouts";
-@import "objects/animations";
+@import 'objects/layouts';
+@import 'objects/animations';
 
-@import "components/nav";
-@import "components/hero";
-@import "components/layering";
-@import "components/gammes";
-@import "components/footer";
-@import "components/blog";
-@import "components/article";
-@import "components/listicon";
-@import "components/slider-modulaire";
-@import "components/product";
-@import "components/avis";
-@import "components/gallery";
-
-@import "components/animations";
+@import 'components/nav';
+@import 'components/hero';
+@import 'components/layering';
+@import 'components/gammes';
+@import 'components/footer';
+@import 'components/blog';
+@import 'components/article';
+@import 'components/listicon';
+@import 'components/slider-modulaire';
+@import 'components/product';
+@import 'components/avis';
+@import 'components/gallery';

@@ -1,35 +1,48 @@
 import '../styles/index.scss'
-import EmblaCarousel from 'embla-carousel'
-import Animation from './Animation'
+import NeptuneCustomizer from "./NeptuneCustomizer"
+import EmblaCarousel from "embla-carousel"
+import LocomotiveScroll from "locomotive-scroll"
 
-new Animation()
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-	anchor.addEventListener('click', function (e) {
-		e.preventDefault();
-
-		document.querySelector(this.getAttribute('href')).scrollIntoView({
-			behavior: 'smooth'
-		});
-	});
-});
-
-if (document.querySelector('.embla')) {
-	const rootNode = document.querySelector('.embla')
-	const viewportNode = rootNode.querySelector('.embla__viewport')
-
-	const prevButtonNode = rootNode.querySelector('.embla__prev')
-	const nextButtonNode = rootNode.querySelector('.embla__next')
-
-	const options = {
-		align: 'center',
-		skipSnaps: false
+addEventListener('DOMContentLoaded', function () {
+	if (NeptuneCustomVars) {
+		new NeptuneCustomizer(NeptuneCustomVars)
 	}
+})
 
-	const embla = EmblaCarousel(viewportNode, options)
+setTimeout(() => {
 
-	prevButtonNode.addEventListener('click', embla.scrollPrev, false)
-	nextButtonNode.addEventListener('click', embla.scrollNext, false)
+	const scroll = new LocomotiveScroll({
+		el: document.querySelector('[data-scroll-container]'),
+		smooth: false
+	})
+
+	setTimeout(() => {
+		scroll.update()
+	}, 1500)
+
+	runScripts()
+}, 1000)
+
+function runScripts() {
+	if (document.querySelector('.embla')) {
+		
+		const rootNode = document.querySelector('.embla')
+		const viewportNode = rootNode.querySelector('.embla__viewport')
+
+		const prevButtonNode = rootNode.querySelector('.embla__prev')
+		const nextButtonNode = rootNode.querySelector('.embla__next')
+
+		const options = {
+			loop: true,
+			align: "center",
+			skipSnaps: false
+		}
+
+		const embla = EmblaCarousel(viewportNode, options)
+
+		prevButtonNode.addEventListener('click', embla.scrollPrev, false)
+		nextButtonNode.addEventListener('click', embla.scrollNext, false)
+	}
 }
 
 /**
@@ -54,36 +67,36 @@ if (modifiers) {
 		buttonActive: 'tabs__button--active',
 		contentActive: 'tabs__content--active'
 	};
-
+	
 	const attributes = {
 		tabIndex: 'data-tab-index'
 	};
-
+	
 	const elRoot = document.querySelector('.js-tabs');
 	const elsButton = elRoot.querySelectorAll('.js-tabs__button');
 	const elsContent = elRoot.querySelectorAll('.js-tabs__content');
-
+	
 	const changeTab = index => {
 		elsButton.forEach(el => {
-			el.classList.remove(modifiers.buttonActive);
-			if (el.getAttribute(attributes.tabIndex) === index) {
-				el.classList.add(modifiers.buttonActive);
-				console.log(el);
-			}
+				el.classList.remove(modifiers.buttonActive);
+				if (el.getAttribute(attributes.tabIndex) === index) {
+						el.classList.add(modifiers.buttonActive);
+						console.log(el);
+				}
 		});
-
+	
 		elsContent.forEach(el => {
-			el.classList.remove(modifiers.contentActive);
-			if (el.getAttribute(attributes.tabIndex) === index) {
-				el.classList.add(modifiers.contentActive);
-			}
+				el.classList.remove(modifiers.contentActive);
+				if (el.getAttribute(attributes.tabIndex) === index) {
+						el.classList.add(modifiers.contentActive);
+				}
 		});
 	};
-
+	
 	elsButton.forEach(el => {
-		el.addEventListener('click', e => {
+	el.addEventListener('click', e => {
 			const tabIndex = el.getAttribute(attributes.tabIndex);
-
+	
 			e.preventDefault();
 			changeTab(tabIndex);
 		});
@@ -100,7 +113,7 @@ const setActiveClassOnNav = () => {
 		: body.classList.add('active')
 }
 
-if (navIcon) {
+if(navIcon) {
 	navIcon.addEventListener('click', () => setActiveClassOnNav())
 }
 
@@ -141,19 +154,19 @@ let
 	startX = null,
 	x = null
 
-if (gallery) {
+if(gallery) {
 	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 		gallery.addEventListener('touchstart', e => {
 			pressed = true
 			startX = e.touches[0].screenX - galleryInner.offsetLeft
 			gallery.style.cursor = 'grabbing'
-		}, { passive: true })
+		}, {passive: true})
 
-		gallery.addEventListener('touchenter', () => gallery.style.cursor = 'grab', { passive: true })
+		gallery.addEventListener('touchenter', () => gallery.style.cursor = 'grab', {passive: true})
 
-		gallery.addEventListener('touchend', () => gallery.style.cursor = 'grab', { passive: true })
+		gallery.addEventListener('touchend', () => gallery.style.cursor = 'grab', {passive: true})
 
-		window.addEventListener('touchend', () => pressed = false, { passive: true })
+		window.addEventListener('touchend', () => pressed = false, {passive: true})
 
 		gallery.addEventListener('touchmove', e => {
 			if (!pressed) return
@@ -164,7 +177,7 @@ if (gallery) {
 			galleryInner.style.left = `${(x - startX)}px`
 
 			checkBoundary()
-		}, { passive: true })
+		}, {passive: true})
 	} else {
 		gallery.addEventListener('mousedown', e => {
 			pressed = true
@@ -275,17 +288,17 @@ document.querySelectorAll('.gallery').forEach(gallery => {
 /**
  * Barre de recherche
  */
-document.addEventListener('DOMContentLoaded', function () {
-
+document.addEventListener('DOMContentLoaded', function() {
+  
 	var myhiddenthing = document.querySelector('.myhiddenthing');
-
+  
 	var mytogglebutton = document.querySelector('.mytogglebutton');
-	mytogglebutton.onclick = function () {
-		myhiddenthing.classList.toggle('active');
+	mytogglebutton.onclick = function() {
+	  myhiddenthing.classList.toggle('active');
 	};
-
+	
 	var myclosebutton = document.querySelector('.myclosebutton');
-	myclosebutton.onclick = function () {
-		myhiddenthing.classList.remove('active');
+	myclosebutton.onclick = function() {
+	  myhiddenthing.classList.remove('active');
 	};
 });

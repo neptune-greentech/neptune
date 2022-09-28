@@ -1,56 +1,51 @@
 h1 {
-	font-size: f(2);
-	font-weight: 500;
-	max-width: s(50);
+    font-size: f(2);
+    font-weight: 500;
+    max-width: s(50);
 }
 
 h2 {
-	font-size: f(1.8);
-	font-weight: bold;
-	color: #444a5e;
+    font-size: f(1.8);
+    font-weight: bold;
+    color: #444A5E;
 }
 
 h3 {
-	font-size: f(2.6);
-	font-weight: 300;
-	margin-bottom: s(2);
+    font-size: f(2.6);
+    font-weight: 300;
+    margin-bottom: s(2);
 }
 
 .subtitle {
-	font-size: f(1.6);
-	font-weight: bold;
-	color: #22343d;
-	font-family: "Fraunces-72pt-Black";
+    font-size: f(1.6) ;  
+    font-weight: bold;
+    color: #22343D;
+    font-family: "Fraunces-72pt-Black";
 }
 
-h2 {
-	span {
-		position: relative;
-		display: inline-grid;
-		&:hover::after {
-			animation-play-state: running;
-		}
-		&::after {
-			content: "";
-			display: block;
-			position: absolute;
-			bottom: s(-1.5);
-			height: 100%;
-			width: 100%;
-			background-position: bottom;
-			background-repeat: repeat-x;
-			background-image: url(http://localhost:8888/acloud/wp-content/themes/neptune/src/images/line.svg);
-			animation: move 15s linear infinite;
-			animation-play-state: paused;
-		}
-	}
+h2{
+    span{
+        position: relative;
+        display: inline-grid;
+        &::after{
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: s(-1.5);
+            height: 100%;
+            width: 100%;
+            background-position: bottom;
+            background-repeat: no-repeat;
+            background-image: url(http://localhost:8888/acloud/wp-content/themes/neptune/src/images/line.svg);
+        }
+    }
 }
 
 @media all and (min-width: $from-medium) {
-	h1 {
-		font-size: 3vw;
-	}
-	h2 {
-		font-size: f(2.5);
-	}
+    h1 {
+        font-size: 3vw;
+    }
+    h2{
+        font-size: f(2.5);
+    }
 }
