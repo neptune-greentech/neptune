@@ -4,7 +4,7 @@
 		display: block;
 		width: 100%;
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: repeat(1, 1fr);
 		column-gap: s(1);
 		row-gap: s(2);
 		padding: 0;
@@ -31,16 +31,16 @@
 				}
 				.card_text {
 					height: auto;
-					display: inline-block;
+					display: inline-block !important;
 					p {
-						opacity: 1;
+						opacity: 1 !important;
 					}
 				}
 				img {
 					top: 0;
 					transform: translateY(-80px);
 				}
-				> div {
+				> div:last-of-type {
 					top: 0;
 					transform: translateY(-85px);
 				}
@@ -56,7 +56,7 @@
 					max-height: 100%;
 				}
 			}
-			> div {
+			> div:last-of-type {
 				background-color: white;
 				padding: s(1);
 				overflow: hidden;

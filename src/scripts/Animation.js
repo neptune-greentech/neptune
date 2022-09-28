@@ -44,6 +44,8 @@ export default class Animation {
         this.valeurs()
         this.equipe()
         this.bouton()
+        this.headerBlog()
+        this.headerPost()
     }
 
     headerHome() {
@@ -400,16 +402,17 @@ export default class Animation {
     }
 
     galerie() {
-        const block = document.querySelector('.wp-block-lazyblock-section-galerie')
+        const blocks = document.querySelectorAll('.wp-block-lazyblock-section-galerie')
 
-        if (block) {
-            const timeline = gsap.timeline({
-                defaults: { duration: 1, ease: 'expo.out' },
-                scrollTrigger: { trigger: block, start: 'top center' }
+        if (blocks) {
+            blocks.forEach(block => {
+                const timeline = gsap.timeline({
+                    defaults: { duration: 1, ease: 'expo.out' },
+                    scrollTrigger: { trigger: block, start: 'top center' }
+                })
+
+                timeline.to(block.querySelectorAll('.anim_opacity'), { opacity: 1 }, 0)
             })
-
-            timeline
-                .to(block.querySelectorAll('.anim_scale'), { scale: 1, opacity: 1, rotate: 0 }, 0.2)
         }
     }
 
@@ -479,35 +482,39 @@ export default class Animation {
     }
 
     taillesDeuxColonnes() {
-        const block = document.querySelector('.wp-block-lazyblock-section-tailles-2-colonnes')
+        const blocks = document.querySelectorAll('.wp-block-lazyblock-section-tailles-2-colonnes')
 
-        if (block) {
-            const timeline = gsap.timeline({
-                defaults: { duration: 1, ease: 'expo.out' },
-                scrollTrigger: { trigger: block, start: 'top center' }
+        if (blocks) {
+            blocks.forEach(block => {
+                const timeline = gsap.timeline({
+                    defaults: { duration: 1, ease: 'expo.out' },
+                    scrollTrigger: { trigger: block, start: 'top center' }
+                })
+
+                timeline
+                    .to(block.querySelector('.anim_title'), { y: 0, opacity: 1, rotate: 0 }, 0)
+                    .to(block.querySelectorAll('.anim_scale'), { scale: 1, opacity: 1, stagger: 0.15 }, 0.1)
             })
-
-            timeline
-                .to(block.querySelector('.anim_title'), { y: 0, opacity: 1, rotate: 0 }, 0)
-                .to(block.querySelectorAll('.anim_scale'), { scale: 1, opacity: 1, stagger: 0.15 }, 0.1)
         }
     }
 
     layoutTitreTexteBoutonImage() {
-        const block = document.querySelector('.wp-block-lazyblock-section-layout-titre-texte-bouton-et-image')
+        const blocks = document.querySelectorAll('.wp-block-lazyblock-section-layout-titre-texte-bouton-et-image')
 
-        if (block) {
-            const timeline = gsap.timeline({
-                defaults: { duration: 1, ease: 'expo.out' },
-                scrollTrigger: { trigger: block, start: 'top center' }
+        if (blocks) {
+            blocks.forEach(block => {
+                const timeline = gsap.timeline({
+                    defaults: { duration: 1, ease: 'expo.out' },
+                    scrollTrigger: { trigger: block, start: 'top center' }
+                })
+
+                timeline
+                    .to(block.querySelector('.anim_title'), { y: 0, opacity: 1, rotate: 0 }, 0)
+                    .to(block.querySelectorAll('.anim_opacity'), { opacity: 1 }, 0.1)
+                    .to(block.querySelector('.anim_overlay'), { scaleY: 0 }, 0.1)
+                    .to(block.querySelector('.anim_zoom'), { scale: 1, duration: 4 }, 0.1)
+                    .to(block.querySelectorAll('.anim_scale'), { scale: 1, opacity: 1, duration: 0.4 }, 0.2)
             })
-
-            timeline
-                .to(block.querySelector('.anim_title'), { y: 0, opacity: 1, rotate: 0 }, 0)
-                .to(block.querySelectorAll('.anim_opacity'), { opacity: 1 }, 0.1)
-                .to(block.querySelector('.anim_overlay'), { scaleY: 0 }, 0.1)
-                .to(block.querySelector('.anim_zoom'), { scale: 1, duration: 4 }, 0.1)
-                .to(block.querySelectorAll('.anim_scale'), { scale: 1, opacity: 1, duration: 0.4 }, 0.2)
         }
     }
 
@@ -559,32 +566,36 @@ export default class Animation {
     }
 
     video() {
-        const block = document.querySelector('.wp-block-lazyblock-section-video')
+        const blocks = document.querySelectorAll('.wp-block-lazyblock-section-video')
 
-        if (block) {
-            const timeline = gsap.timeline({
-                defaults: { duration: 1, ease: 'expo.out' },
-                scrollTrigger: { trigger: block, start: 'top center' }
+        if (blocks) {
+            blocks.forEach(block => {
+                const timeline = gsap.timeline({
+                    defaults: { duration: 1, ease: 'expo.out' },
+                    scrollTrigger: { trigger: block, start: 'top center' }
+                })
+
+                timeline
+                    .to(block.querySelector('.anim_overlay'), { scaleY: 0 }, 0)
+                    .to(block.querySelector('.anim_zoom'), { scale: 1, duration: 4 }, 0)
             })
-
-            timeline
-                .to(block.querySelector('.anim_overlay'), { scaleY: 0 }, 0)
-                .to(block.querySelector('.anim_zoom'), { scale: 1, duration: 4 }, 0)
         }
     }
 
     titreParagrapheGauche() {
-        const block = document.querySelector('.wp-block-lazyblock-section-titre-et-paragraphe-gauche')
+        const blocks = document.querySelectorAll('.wp-block-lazyblock-section-titre-et-paragraphe-gauche')
 
-        if (block) {
-            const timeline = gsap.timeline({
-                defaults: { duration: 1, ease: 'expo.out' },
-                scrollTrigger: { trigger: block, start: 'top center' }
+        if (blocks) {
+            blocks.forEach(block => {
+                const timeline = gsap.timeline({
+                    defaults: { duration: 1, ease: 'expo.out' },
+                    scrollTrigger: { trigger: block, start: 'top center' }
+                })
+
+                timeline
+                    .to(block.querySelector('.anim_title'), { y: 0, opacity: 1, rotate: 0 }, 0)
+                    .to(block.querySelectorAll('.anim_opacity'), { opacity: 1 }, 0.2)
             })
-
-            timeline
-                .to(block.querySelector('.anim_title'), { y: 0, opacity: 1, rotate: 0 }, 0)
-                .to(block.querySelectorAll('.anim_opacity'), { opacity: 1 }, 0.2)
         }
     }
 
@@ -607,17 +618,19 @@ export default class Animation {
     }
 
     appel() {
-        const block = document.querySelector('.wp-block-lazyblock-section-layout-appel')
+        const blocks = document.querySelectorAll('.wp-block-lazyblock-section-layout-appel')
 
-        if (block) {
-            const timeline = gsap.timeline({
-                defaults: { duration: 1, ease: 'expo.out' },
-                scrollTrigger: { trigger: block, start: 'top center' }
+        if (blocks) {
+            blocks.forEach(block => {
+                const timeline = gsap.timeline({
+                    defaults: { duration: 1, ease: 'expo.out' },
+                    scrollTrigger: { trigger: block, start: 'top center' }
+                })
+
+                timeline
+                    .to(block.querySelector('.anim_title'), { y: 0, opacity: 1, rotate: 0 }, 0)
+                    .to(block.querySelectorAll('.anim_opacity'), { opacity: 1, stagger: 0.15 }, 0.1)
             })
-
-            timeline
-                .to(block.querySelector('.anim_title'), { y: 0, opacity: 1, rotate: 0 }, 0)
-                .to(block.querySelectorAll('.anim_opacity'), { opacity: 1, stagger: 0.15 }, 0.1)
         }
     }
 
@@ -696,6 +709,38 @@ export default class Animation {
             timeline
                 .to(block.querySelector('.anim_title'), { y: 0, opacity: 1, rotate: 0 }, 0)
                 .to(block.querySelector('.anim_scale'), { scale: 1, opacity: 1, duration: 0.4 }, 0.1)
+        }
+    }
+
+    headerBlog() {
+        const block = document.querySelector('.hero-blog')
+
+        if (block) {
+            const timeline = gsap.timeline({
+                defaults: { duration: 1, ease: 'expo.out' },
+                scrollTrigger: { trigger: block, start: 'top center' }
+            })
+
+            timeline
+                .to(block.querySelector('.anim_overlay'), { scaleY: 0 }, 0.2)
+                .to(block.querySelector('.anim_title'), { y: 0, opacity: 1, rotate: 0 }, 0.3)
+        }
+    }
+
+    headerPost() {
+        const block = document.querySelector('.hero-article')
+
+        if (block) {
+            const timeline = gsap.timeline({
+                defaults: { duration: 1, ease: 'expo.out' },
+                scrollTrigger: { trigger: block, start: 'top center' }
+            })
+
+            timeline
+                .to(block.querySelector('.anim_opacity'), { opacity: 1 }, 0)
+                .to(block.querySelector('.anim_title'), { y: 0, opacity: 1, rotate: 0 }, 0.1)
+                .to(block.querySelector('.anim_opacity2'), { opacity: 1 }, 0.2)
+                .to(block.querySelector('.anim_overlay'), { scaleY: 0 }, 0.4)
         }
     }
 }

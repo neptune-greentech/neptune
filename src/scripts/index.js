@@ -4,6 +4,16 @@ import Animation from './Animation'
 
 new Animation()
 
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+	anchor.addEventListener('click', function (e) {
+		e.preventDefault();
+
+		document.querySelector(this.getAttribute('href')).scrollIntoView({
+			behavior: 'smooth'
+		});
+	});
+});
+
 if (document.querySelector('.embla')) {
 	const rootNode = document.querySelector('.embla')
 	const viewportNode = rootNode.querySelector('.embla__viewport')
