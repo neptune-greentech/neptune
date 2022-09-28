@@ -24,6 +24,26 @@ export default class Animation {
         this.layoutTexteImage()
         this.tabs()
         this.reassurance()
+        this.deuxColonnesImage()
+        this.galerie()
+        this.deuxParagraphesBouton()
+        this.headerGamme()
+        this.deuxColonnesLayoutBoutonImage()
+        this.tailles()
+        this.taillesDeuxColonnes()
+        this.layoutTitreTexteBoutonImage()
+        this.paragrapheGauche()
+        this.layoutVideoTexte()
+        this.paragrapheCentre()
+        this.video()
+        this.titreParagrapheGauche()
+        this.headerTitreDescription()
+        this.appel()
+        this.banniereImage()
+        this.titreLongTextImage()
+        this.valeurs()
+        this.equipe()
+        this.bouton()
     }
 
     headerHome() {
@@ -362,6 +382,320 @@ export default class Animation {
             timeline
                 .to(block.querySelectorAll('.anim_scale'), { scale: 1, opacity: 1 }, 0)
                 .to(block.querySelector('.anim_opacity'), { opacity: 1 }, 0.6)
+        }
+    }
+
+    deuxColonnesImage() {
+        const block = document.querySelector('.wp-block-lazyblock-section-deux-colonnes-avec-image')
+
+        if (block) {
+            const timeline = gsap.timeline({
+                defaults: { duration: 1, ease: 'expo.out' },
+                scrollTrigger: { trigger: block, start: 'top center' }
+            })
+
+            timeline
+                .to(block.querySelectorAll('.anim_scale'), { scale: 1, opacity: 1, stagger: 0.15 }, 0)
+        }
+    }
+
+    galerie() {
+        const block = document.querySelector('.wp-block-lazyblock-section-galerie')
+
+        if (block) {
+            const timeline = gsap.timeline({
+                defaults: { duration: 1, ease: 'expo.out' },
+                scrollTrigger: { trigger: block, start: 'top center' }
+            })
+
+            timeline
+                .to(block.querySelectorAll('.anim_scale'), { scale: 1, opacity: 1, rotate: 0 }, 0.2)
+        }
+    }
+
+    deuxParagraphesBouton() {
+        const block = document.querySelector('.wp-block-lazyblock-section-deux-paragraphes-et-un-bouton')
+
+        if (block) {
+            const timeline = gsap.timeline({
+                defaults: { duration: 1, ease: 'expo.out' },
+                scrollTrigger: { trigger: block, start: 'top center' }
+            })
+
+            timeline
+                .to(block.querySelector('.anim_title'), { y: 0, opacity: 1, rotate: 0 }, 0)
+                .to(block.querySelectorAll('.anim_opacity'), { opacity: 1, stagger: 0.15 }, 0.1)
+                .to(block.querySelector('.anim_scale'), { scale: 1, opacity: 1, duration: 0.4 }, 0.2)
+        }
+    }
+
+    headerGamme() {
+        const block = document.querySelector('.wp-block-lazyblock-header-gamme')
+
+        if (block) {
+            const timeline = gsap.timeline({
+                defaults: { duration: 1, ease: 'expo.out' },
+                scrollTrigger: { trigger: block }
+            })
+
+            timeline
+                .to(block.querySelector('.anim_cloud'), { opacity: 1 }, 0.2)
+                .to(block.querySelector('.anim_cloud'), { y: 0, scale: 1, duration: 3, ease: 'expo.out' }, 0.2)
+        }
+    }
+
+    deuxColonnesLayoutBoutonImage() {
+        const block = document.querySelector('.wp-block-lazyblock-section-deux-colonnes-and-layout-button-image')
+
+        if (block) {
+            const timeline = gsap.timeline({
+                defaults: { duration: 1, ease: 'expo.out' },
+                scrollTrigger: { trigger: block, start: 'top center' }
+            })
+
+            timeline
+                .to(block.querySelectorAll('.anim_opacity'), { opacity: 1, stagger: 0.15 }, 0)
+                .to(block.querySelector('.anim_title'), { y: 0, opacity: 1, rotate: 0 }, 0.1)
+                .to(block.querySelector('.anim_opacity2'), { opacity: 1, stagger: 0.15 }, 0.2)
+                .to(block.querySelectorAll('.anim_scale'), { scale: 1, opacity: 1, duration: 0.4, stagger: 0.15 }, 0.3)
+                .to(block.querySelector('.anim_overlay'), { scaleY: 0 }, 0.4)
+                .to(block.querySelector('.anim_zoom'), { scale: 1, duration: 4 }, 0.4)
+        }
+    }
+
+    tailles() {
+        const block = document.querySelector('.wp-block-lazyblock-section-tailles')
+
+        if (block) {
+            const timeline = gsap.timeline({
+                defaults: { duration: 1, ease: 'expo.out' },
+                scrollTrigger: { trigger: block, start: 'top center' }
+            })
+
+            timeline
+                .to(block.querySelector('.anim_title'), { y: 0, opacity: 1, rotate: 0 }, 0)
+                .to(block.querySelectorAll('.anim_scale'), { scale: 1, opacity: 1, stagger: 0.15 }, 0.1)
+        }
+    }
+
+    taillesDeuxColonnes() {
+        const block = document.querySelector('.wp-block-lazyblock-section-tailles-2-colonnes')
+
+        if (block) {
+            const timeline = gsap.timeline({
+                defaults: { duration: 1, ease: 'expo.out' },
+                scrollTrigger: { trigger: block, start: 'top center' }
+            })
+
+            timeline
+                .to(block.querySelector('.anim_title'), { y: 0, opacity: 1, rotate: 0 }, 0)
+                .to(block.querySelectorAll('.anim_scale'), { scale: 1, opacity: 1, stagger: 0.15 }, 0.1)
+        }
+    }
+
+    layoutTitreTexteBoutonImage() {
+        const block = document.querySelector('.wp-block-lazyblock-section-layout-titre-texte-bouton-et-image')
+
+        if (block) {
+            const timeline = gsap.timeline({
+                defaults: { duration: 1, ease: 'expo.out' },
+                scrollTrigger: { trigger: block, start: 'top center' }
+            })
+
+            timeline
+                .to(block.querySelector('.anim_title'), { y: 0, opacity: 1, rotate: 0 }, 0)
+                .to(block.querySelectorAll('.anim_opacity'), { opacity: 1 }, 0.1)
+                .to(block.querySelector('.anim_overlay'), { scaleY: 0 }, 0.1)
+                .to(block.querySelector('.anim_zoom'), { scale: 1, duration: 4 }, 0.1)
+                .to(block.querySelectorAll('.anim_scale'), { scale: 1, opacity: 1, duration: 0.4 }, 0.2)
+        }
+    }
+
+    paragrapheGauche() {
+        const block = document.querySelector('.wp-block-lazyblock-section-paragraphe-gauche')
+
+        if (block) {
+            const timeline = gsap.timeline({
+                defaults: { duration: 1, ease: 'expo.out' },
+                scrollTrigger: { trigger: block, start: 'top center' }
+            })
+
+            timeline
+                .to(block.querySelector('.anim_title'), { y: 0, opacity: 1, rotate: 0 }, 0)
+                .to(block.querySelectorAll('.anim_opacity'), { opacity: 1 }, 0.1)
+        }
+    }
+
+    layoutVideoTexte() {
+        const block = document.querySelector('.wp-block-lazyblock-section-layout-video-and-texte')
+
+        if (block) {
+            const timeline = gsap.timeline({
+                defaults: { duration: 1, ease: 'expo.out' },
+                scrollTrigger: { trigger: block, start: 'top center' }
+            })
+
+            timeline
+                .to(block.querySelector('.anim_title'), { y: 0, opacity: 1, rotate: 0 }, 0)
+                .to(block.querySelectorAll('.anim_opacity'), { opacity: 1 }, 0.1)
+                .to(block.querySelector('.anim_overlay'), { scaleY: 0 }, 0.1)
+                .to(block.querySelector('.anim_zoom'), { scale: 1, duration: 4 }, 0.1)
+        }
+    }
+
+    paragrapheCentre() {
+        const block = document.querySelector('.wp-block-lazyblock-section-paragraphe-centre')
+
+        if (block) {
+            const timeline = gsap.timeline({
+                defaults: { duration: 1, ease: 'expo.out' },
+                scrollTrigger: { trigger: block, start: 'top center' }
+            })
+
+            timeline
+                .to(block.querySelector('.anim_title'), { y: 0, opacity: 1, rotate: 0 }, 0)
+                .to(block.querySelectorAll('.anim_opacity'), { opacity: 1 }, 0.2)
+        }
+    }
+
+    video() {
+        const block = document.querySelector('.wp-block-lazyblock-section-video')
+
+        if (block) {
+            const timeline = gsap.timeline({
+                defaults: { duration: 1, ease: 'expo.out' },
+                scrollTrigger: { trigger: block, start: 'top center' }
+            })
+
+            timeline
+                .to(block.querySelector('.anim_overlay'), { scaleY: 0 }, 0)
+                .to(block.querySelector('.anim_zoom'), { scale: 1, duration: 4 }, 0)
+        }
+    }
+
+    titreParagrapheGauche() {
+        const block = document.querySelector('.wp-block-lazyblock-section-titre-et-paragraphe-gauche')
+
+        if (block) {
+            const timeline = gsap.timeline({
+                defaults: { duration: 1, ease: 'expo.out' },
+                scrollTrigger: { trigger: block, start: 'top center' }
+            })
+
+            timeline
+                .to(block.querySelector('.anim_title'), { y: 0, opacity: 1, rotate: 0 }, 0)
+                .to(block.querySelectorAll('.anim_opacity'), { opacity: 1 }, 0.2)
+        }
+    }
+
+    headerTitreDescription() {
+        const block = document.querySelector('.wp-block-lazyblock-header-titre-and-description')
+
+        if (block) {
+            const timeline = gsap.timeline({
+                defaults: { duration: 1, ease: 'expo.out' },
+                scrollTrigger: { trigger: block, start: 'top center' }
+            })
+
+            timeline
+                .to(block.querySelector('.anim_opacity'), { opacity: 1 }, 0)
+                .to(block.querySelector('.anim_title'), { y: 0, opacity: 1, rotate: 0 }, 0.1)
+                .to(block.querySelector('.anim_opacity2'), { opacity: 1 }, 0.2)
+                .to(block.querySelector('.anim_overlay'), { scaleY: 0 }, 0.3)
+                .to(block.querySelector('.anim_zoom'), { scale: 1, duration: 4 }, 0.3)
+        }
+    }
+
+    appel() {
+        const block = document.querySelector('.wp-block-lazyblock-section-layout-appel')
+
+        if (block) {
+            const timeline = gsap.timeline({
+                defaults: { duration: 1, ease: 'expo.out' },
+                scrollTrigger: { trigger: block, start: 'top center' }
+            })
+
+            timeline
+                .to(block.querySelector('.anim_title'), { y: 0, opacity: 1, rotate: 0 }, 0)
+                .to(block.querySelectorAll('.anim_opacity'), { opacity: 1, stagger: 0.15 }, 0.1)
+        }
+    }
+
+    banniereImage() {
+        const block = document.querySelector('.wp-block-lazyblock-section-banniere-image')
+
+        if (block) {
+            const timeline = gsap.timeline({
+                defaults: { duration: 1, ease: 'expo.out' },
+                scrollTrigger: { trigger: block, start: 'top center' }
+            })
+
+            timeline
+                .to(block.querySelector('.anim_overlay'), { scaleY: 0 }, 0)
+                .to(block.querySelector('.anim_zoom'), { scale: 1, duration: 4 }, 0)
+        }
+    }
+
+    titreLongTextImage() {
+        const block = document.querySelector('.wp-block-lazyblock-section-layout-titre-long-texte-et-image')
+
+        if (block) {
+            const timeline = gsap.timeline({
+                defaults: { duration: 1, ease: 'expo.out' },
+                scrollTrigger: { trigger: block, start: 'top center' }
+            })
+
+            timeline
+                .to(block.querySelector('.anim_title'), { y: 0, opacity: 1, rotate: 0 }, 0)
+                .to(block.querySelectorAll('.anim_opacity'), { opacity: 1, stagger: 0.15 }, 0.1)
+                .to(block.querySelectorAll('.anim_scale'), { scale: 1, opacity: 1 }, 0.2)
+        }
+    }
+
+    valeurs() {
+        const block = document.querySelector('.wp-block-lazyblock-section-valeurs-acloud')
+
+        if (block) {
+            const timeline = gsap.timeline({
+                defaults: { duration: 1, ease: 'expo.out' },
+                scrollTrigger: { trigger: block, start: 'top center' }
+            })
+
+            timeline
+                .to(block.querySelectorAll('.anim_title'), { y: 0, opacity: 1, rotate: 0, stagger: 0.15 }, 0)
+                .to(block.querySelectorAll('.anim_opacity'), { scale: 1, opacity: 1, stagger: 0.15 }, 0.1)
+        }
+    }
+
+    equipe() {
+        const block = document.querySelector('.wp-block-lazyblock-section-equipe')
+
+        if (block) {
+            const timeline = gsap.timeline({
+                defaults: { duration: 1, ease: 'expo.out' },
+                scrollTrigger: { trigger: block, start: 'top center' }
+            })
+
+            timeline
+                .to(block.querySelectorAll('.anim_title'), { y: 0, opacity: 1, rotate: 0, stagger: 0.15 }, 0)
+                .to(block.querySelectorAll('.anim_opacity'), { scale: 1, opacity: 1, stagger: 0.15 }, 0.1)
+                .to(block.querySelectorAll('.anim_overlay'), { scaleY: 0, stagger: 0.15 }, 0.2)
+                .to(block.querySelectorAll('.anim_zoom'), { scale: 1, duration: 4, stagger: 0.15 }, 0.2)
+        }
+    }
+
+    bouton() {
+        const block = document.querySelector('.wp-block-lazyblock-section-bouton')
+
+        if (block) {
+            const timeline = gsap.timeline({
+                defaults: { duration: 1, ease: 'expo.out' },
+                scrollTrigger: { trigger: block, start: 'top center' }
+            })
+
+            timeline
+                .to(block.querySelector('.anim_title'), { y: 0, opacity: 1, rotate: 0 }, 0)
+                .to(block.querySelector('.anim_scale'), { scale: 1, opacity: 1, duration: 0.4 }, 0.1)
         }
     }
 }

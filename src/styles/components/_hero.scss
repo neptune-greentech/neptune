@@ -186,6 +186,9 @@
 				span {
 					position: relative;
 					display: inline-grid;
+					&:hover::after {
+						animation-play-state: running;
+					}
 					&::after {
 						content: "";
 						display: block;
@@ -195,8 +198,10 @@
 						width: 100%;
 						background-size: 100%;
 						background-position: bottom;
-						background-repeat: no-repeat;
+						background-repeat: repeat-x;
 						background-image: url(http://localhost:8888/acloud/wp-content/themes/neptune/src/images/line.svg);
+						animation: move 15s linear infinite;
+						animation-play-state: paused;
 					}
 				}
 			}

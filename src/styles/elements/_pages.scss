@@ -52,6 +52,19 @@ body {
 	}
 }
 
+.img {
+	position: relative;
+	overflow: hidden;
+	border-radius: 20px;
+	&-max {
+		width: 100%;
+		@media (min-width: $from-medium) {
+			width: 35rem;
+			margin: 0 auto;
+		}
+	}
+}
+
 .container-content {
 	width: 70vw;
 	margin-right: auto;
