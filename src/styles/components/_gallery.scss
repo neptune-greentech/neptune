@@ -1,71 +1,33 @@
 .gallery {
-    position: relative;
-    &::before{
-        content: "";
-        display: block;
-        background-image:url(http://localhost:8888/acloud//wp-content/themes/neptune/src/images/nuage.svg) ;
-        width: s(25);
-        height: s(14);
-        position: absolute;
-        -moz-background-size: contain;
-        background-size: contain;
+    &_slider {
+        overflow: hidden;
+        position: relative;
+        height: 26rem;
+        &_inner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            pointer-events: none;
+        }
+    }
+    &_slide {
+        width: 16rem;
+        height: 100%;
+        background-image: url('https://demo.neptune-green.tech/wp-content/uploads/2021/01/image.jpg');
+        background-size: cover;
         background-repeat: no-repeat;
-        top: s(-9);
-        left: s(-14);
-        z-index: -1;
-    }
-    .prev, 
-    .next {
-        outline: 0;
-        cursor: pointer;
-        background-color: transparent;
-        touch-action: manipulation;
-        position: absolute;
-        z-index: 1;
-        top: 50%;
-        border: 0;
-        background-color: white;
-        transform: translateY(-50%);
-        border-radius: 50%;
-        width: 90px;
-        height: 90px;
-        justify-content: center;
-        align-items: center;
-        padding: 0;
-        display: flex;
-        img{
-            width: s(1.5);
-            height: s(1.5);
-        }
-    }
-    .prev {
-        left: s(1.5);
-    }
-    .next {
-        right: s(1.5);
-    }
-}
-.slider {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-    .slider_inner {
-        display: flex;
-        .slide {
-            flex: 1 0 100%;
-            img{
-                width: 100%;
-            }
-        }
+        background-position: center;
     }
 }
 
 @media all and (min-width: $from-medium) {
     .gallery {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        &_slide {
+            width: 36rem;
+        }
     }
 }

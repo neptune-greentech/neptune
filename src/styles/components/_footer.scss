@@ -1,53 +1,31 @@
 .footer {
-    &_container{
-        margin-bottom: s(8);
-        .col-4{
+    &_logo {
+        width: 10rem;
+        img {
             width: 100%;
-            >div{
-                &:not(:first-of-type) {
-                    margin: s(2) 0 0 0;
-                    @media all and (min-width: $from-medium) {
-                        margin: 0;
-                    }
-                }
-                .footer_logo {
-                    width: s(8);
-                    img {
-                        width: 100%;
-                    }
-                }
-                p{
-                    opacity: .3;
-                    color: var(--color-dark);
-                    font-size: f(1.1);
-                    margin-bottom: s(2);
-                    font-weight: normal;
-                }
-                ul{
-                    li {
-                        font-weight: normal;
-                        font-size: f(.85);
-                        color: var(--color-dark);
-                        text-transform: uppercase;
-                        letter-spacing: 1px;
-                        &:not(:last-of-type) {
-                            margin-bottom: s(1);
-                        }
-                    }
-                }
-            }
-
         }
     }
-    .footer_bottom{
-        p{
-            display: flex;
-            opacity: .3;
-            color: var(--color-dark);
-            font-size: f(.9);
-            a{
-                margin: auto s(.5);
-                font-size: f(.9);
+    &_menu {
+        margin: s(4) 0;
+        li {
+            font-size: f(1.8);
+            &:not(:last-of-type) {
+                margin-bottom: s(0.5);
+            }
+        }
+    }
+    &_social {
+        display: flex;
+        align-items: center;
+        li {
+            &:not(:last-of-type) {
+                margin-right: s(2);
+            }
+            a {
+            height: 1.4rem;
+                img {
+                    height: 100%;
+                }
             }
         }
     }
@@ -60,12 +38,13 @@
             align-items: center;
             justify-content: space-between;
         }
-        .footer_logo {
+        &_logo {
+            width: 25%;
             img {
-                max-width:s(8);
+                max-width: 10rem;
             }
         }
-        .footer_menu {
+        &_menu {
             width: 50%;
             margin: 0 s(3);
             ul {
@@ -73,11 +52,16 @@
                 align-items: center;
                 justify-content: center;
                 li {
+                    font-size: f(1.1);
                     &:not(:last-of-type) {
                         margin: 0 s(4) 0 0;
                     }
                 }
             }
+        }
+        &_social {
+            width: 25%;
+            justify-content: flex-end;
         }
     }
 }

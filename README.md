@@ -52,11 +52,6 @@ You can fill in the links to your social networks in the customizer's social net
 You can change the footer text in the customizer's footer section
 
 
-### Child theme
-
-If you want to create a child theme, you must copy the vendor folder and place in the child theme.
-
-
 ## Development
 
 *Here are some information for development purpose.*
@@ -180,6 +175,3 @@ Menus are defined in the `config\menus.php`
 #### Theme supports
 
 Theme supports are defined in the `config\theme_support.php` file
-
-
-
