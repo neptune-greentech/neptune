@@ -1,11 +1,49 @@
 import '../styles/index.scss'
 import NeptuneCustomizer from "./NeptuneCustomizer"
+import EmblaCarousel from "embla-carousel"
+import LocomotiveScroll from "locomotive-scroll"
 
 addEventListener('DOMContentLoaded', function () {
 	if (NeptuneCustomVars) {
 		new NeptuneCustomizer(NeptuneCustomVars)
 	}
 })
+
+setTimeout(() => {
+
+	const scroll = new LocomotiveScroll({
+		el: document.querySelector('[data-scroll-container]'),
+		smooth: false
+	})
+
+	setTimeout(() => {
+		scroll.update()
+	}, 1500)
+
+	runScripts()
+}, 1000)
+
+function runScripts() {
+	if (document.querySelector('.embla')) {
+		
+		const rootNode = document.querySelector('.embla')
+		const viewportNode = rootNode.querySelector('.embla__viewport')
+
+		const prevButtonNode = rootNode.querySelector('.embla__prev')
+		const nextButtonNode = rootNode.querySelector('.embla__next')
+
+		const options = {
+			loop: true,
+			align: "center",
+			skipSnaps: false
+		}
+
+		const embla = EmblaCarousel(viewportNode, options)
+
+		prevButtonNode.addEventListener('click', embla.scrollPrev, false)
+		nextButtonNode.addEventListener('click', embla.scrollNext, false)
+	}
+}
 
 /**
  * Variables
@@ -17,8 +55,54 @@ const
 	heroFull = document.querySelector('.hero-full'),
 	heroImg = document.querySelector('.hero_img'),
 	heroOverlay = document.querySelector('.hero_overlay'),
-	gallery = document.querySelector('.gallery_slider'),
-	galleryInner = document.querySelector('.gallery_slider_inner')
+	gallery = document.querySelector('.gammes_slider'),
+	galleryInner = document.querySelector('.gammes_slider_inner'),
+	modifiers = document.querySelector('.js-tabs')
+
+/**
+ * tabs
+ */
+if (modifiers) {
+	const modifiers = {
+		buttonActive: 'tabs__button--active',
+		contentActive: 'tabs__content--active'
+	};
+	
+	const attributes = {
+		tabIndex: 'data-tab-index'
+	};
+	
+	const elRoot = document.querySelector('.js-tabs');
+	const elsButton = elRoot.querySelectorAll('.js-tabs__button');
+	const elsContent = elRoot.querySelectorAll('.js-tabs__content');
+	
+	const changeTab = index => {
+		elsButton.forEach(el => {
+				el.classList.remove(modifiers.buttonActive);
+				if (el.getAttribute(attributes.tabIndex) === index) {
+						el.classList.add(modifiers.buttonActive);
+						console.log(el);
+				}
+		});
+	
+		elsContent.forEach(el => {
+				el.classList.remove(modifiers.contentActive);
+				if (el.getAttribute(attributes.tabIndex) === index) {
+						el.classList.add(modifiers.contentActive);
+				}
+		});
+	};
+	
+	elsButton.forEach(el => {
+	el.addEventListener('click', e => {
+			const tabIndex = el.getAttribute(attributes.tabIndex);
+	
+			e.preventDefault();
+			changeTab(tabIndex);
+		});
+	});
+}
+
 
 /**
  * Nav mobile menu burger
@@ -63,9 +147,8 @@ if (heroOverlay) {
 }
 
 /**
- * Gallery draggable
+ * Gammes draggable
  */
-
 let
 	pressed = false,
 	startX = null,
@@ -135,14 +218,13 @@ function checkBoundary() {
 /**
  * Testimonials slider
  */
-
-document.querySelectorAll('.testimonials').forEach(testimonials => {
+document.querySelectorAll('.gallery').forEach(gallery => {
 
 	const
-		slider = testimonials.querySelector('.slider_inner'),
-		slides = testimonials.querySelectorAll('.slide'),
-		prevBtn = testimonials.querySelector('.prev'),
-		nextBtn = testimonials.querySelector('.next'),
+		slider = gallery.querySelector('.slider_inner'),
+		slides = gallery.querySelectorAll('.slide'),
+		prevBtn = gallery.querySelector('.prev'),
+		nextBtn = gallery.querySelector('.next'),
 		numSlides = slides.length
 
 	let
@@ -160,7 +242,7 @@ document.querySelectorAll('.testimonials').forEach(testimonials => {
 	slider.appendChild(firstClone)
 	slider.prepend(lastClone)
 
-	const allSlides = testimonials.querySelectorAll('.slide')
+	const allSlides = gallery.querySelectorAll('.slide')
 
 	slider.style.transform = `translateX(${-moveX}px)`
 
@@ -202,3 +284,21 @@ document.querySelectorAll('.testimonials').forEach(testimonials => {
 		slider.style.transform = `translateX(${-(moveX * counter)}px)`
 	})
 })
+
+/**
+ * Barre de recherche
+ */
+document.addEventListener('DOMContentLoaded', function() {
+  
+	var myhiddenthing = document.querySelector('.myhiddenthing');
+  
+	var mytogglebutton = document.querySelector('.mytogglebutton');
+	mytogglebutton.onclick = function() {
+	  myhiddenthing.classList.toggle('active');
+	};
+	
+	var myclosebutton = document.querySelector('.myclosebutton');
+	myclosebutton.onclick = function() {
+	  myhiddenthing.classList.remove('active');
+	};
+});

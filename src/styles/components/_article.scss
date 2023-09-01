@@ -1,29 +1,71 @@
 .article {
-    h2, h3, h4, h5, h6, p, ul {
-        max-width: 42rem;
-        margin-right: auto;
-        margin-left: auto;
+    h2, h3, h4, h5, h6 {
+        max-width: s(52);
+        text-align: left;
     }
     h2 {
-        margin: s(4) auto s(2);
+        margin: s(4) 0;
+        font-size: s(2);
+        color: #273841;
+        font-weight: 400;
+        line-height: 1.5;
+        &:first-child{
+            margin-top: 0;
+        }
     }
     p {
-        margin: s(1) auto;
-    }
-
-    img {
-		width: 100%;
-		height:auto;
-        max-width: 50rem;
-        display: block;
-		margin: s(4) auto;
-    }
-}
-
-@media all and (min-width: $from-medium) {
-    .article {
-        h2 {
-            font-size: f(3.6);
+        column-count: 0;
+        color: #575C69;
+        @media all and (min-width: $from-medium) {
+            column-count: 2;
+            column-gap: s(4);
         }
+    }
+    .wp-block-image{
+        position: relative;
+        margin: s(6) 0;
+            &::before{
+                content: "";
+                display: block;
+                background-image:url(http://localhost:8888/acloud//wp-content/themes/neptune/src/images/nuage.svg) ;
+                width: s(26);
+                height: s(17);
+                position: absolute;
+                -moz-background-size: contain;
+                background-size: contain;
+                background-repeat: no-repeat;
+                bottom: s(-7);
+                left: s(-18);
+                z-index: -1;
+            }
+            &::after{
+                content: "";
+                display: block;
+                background-image:url(http://localhost:8888/acloud//wp-content/themes/neptune/src/images/nuage.svg) ;
+                width: s(24);
+                height: s(15);
+                position: absolute;
+                -moz-background-size: contain;
+                background-size: contain;
+                background-repeat: no-repeat;
+                top: s(-14.5);
+                right: s(-17);
+                z-index: -1;
+            }
+        .size-full{
+            margin: 0;
+            padding: 0;
+        }
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        max-height: s(30);
+        border-radius: 10px;
+        margin-right: auto;
+        margin-left: auto;
+        position: relative;
+        object-fit: cover;
+        z-index: 1;
     }
 }

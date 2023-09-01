@@ -1,57 +1,30 @@
     <footer class="footer bg">
         <div class="container footer_container">
-
-            <a class="footer_logo" href="<?= home_url(); ?>">
-                <img src="<?php echo get_template_directory_uri() . '/dist/images/logo-neptune.png';?>" alt="Logo Neptune.">
-            </a>
-
-            <?php
-            wp_nav_menu(
-                array(
-                    'menu' => 'main_menu',
-                    'container' => 'div',
-                    'container_class' => 'footer_menu',
-                    'items_wrap' => '<ul>%3$s</ul>'
-                )
-            );
-            ?>
-
-            <ul class="footer_social">
-				<?php if(get_theme_mod('neptune_social_facebook')) :?>
-					<li>
-						<a href="<?php echo esc_url(get_theme_mod('neptune_social_facebook')); ?>">
-							<img src="<?php echo get_template_directory_uri() . '/dist/images/icon-facebook.png'; ?>" alt="">
-						</a>
-					</li>
-				<?php endif; ?>
-				<?php if(get_theme_mod('neptune_social_instagram')) :?>
-                <li>
-                    <a href="<?php echo esc_url(get_theme_mod('neptune_social_instagram')); ?>">
-                        <img src="<?php echo get_template_directory_uri() . '/dist/images/icon-instagram.png'; ?>" alt="">
+            <div class="col-4">
+                <div>
+                    <a class="footer_logo" href="<?= home_url(); ?>">
+                        <img src="<?php echo get_template_directory_uri() . '/src/images/logo_footer.svg';?>" alt="Logo Acloud.">
                     </a>
-				</li>
-				<?php endif; ?>
-				<?php if(get_theme_mod('neptune_social_linkedin')) :?>
-                <li>
-                    <a href="<?php echo esc_url(get_theme_mod('neptune_social_linkedin')); ?>">
-                        <img src="<?php echo get_template_directory_uri() . '/dist/images/icon-linkedin.png'; ?>" alt="">
-                    </a>
-				</li>
-				<?php endif; ?>
-				<?php if(get_theme_mod('neptune_social_twitter')) :?>
-                <li>
-                    <a href="<?php echo esc_url(get_theme_mod('neptune_social_twitter')); ?>">
-                        <img src="<?php echo get_template_directory_uri() . '/dist/images/icon-twitter.png'; ?>" alt="">
-                    </a>
-				</li>
-				<?php endif; ?>
-            </ul>
-
+                </div>
+                <div>
+                    <?php dynamic_sidebar('Sidebar footer lien 1'); ?>
+                </div>
+                <div>
+                    <?php dynamic_sidebar('Sidebar footer lien 2'); ?>
+                </div>
+                <div>
+                    <?php dynamic_sidebar('Sidebar footer lien 3'); ?>
+                </div>
+            </div>
         </div>
+        <div class="container footer_bottom">
+            <p>© 2022 Acloud® Copyright - <a href="<?php echo bloginfo('url'); ?>/epicure-conseils/">Epicure Conseils</a> - <a href="<?php echo bloginfo('url'); ?>/politique-de-confidentialite/">Politique de confidentialités</a> - <a href="<?php echo bloginfo('url'); ?>/mentions-legales">Mentions légales</a></p>
+        </div>  
     </footer>
 
-<?php wp_footer(); ?>
-
+    <?php wp_footer(); ?>
+    
+    </div>
 </body>
 
 </html>
