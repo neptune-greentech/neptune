@@ -10,6 +10,16 @@
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri() . '/src/images/favicon.png';?>" type="image/png" />
 </head>
 
-<body <?php body_class(); ?>>
-	<div data-scroll-container>
-		<?php include_once locate_template('/components/nav.php'); ?>
+<body>
+	<?php include_once locate_template('/components/bar.php'); ?>
+    <?php include_once locate_template('/components/nav.php'); ?>
+
+	<header class="hero hero-full">
+		<div class="container hero_container">
+
+			<p><?php bloginfo('description'); ?></p>
+			<h1><?php bloginfo('name'); ?></h1>
+			<p><?php echo get_theme_mod('neptune_homepage_header_paragraph'); ?></p>
+
+		</div>
+	</header>

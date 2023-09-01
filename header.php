@@ -10,9 +10,9 @@
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri() . '/src/images/favicon.png';?>" type="image/png" />
 </head>
 
-<body <?php body_class(); ?>>
-    <div data-scroll-container>
-        <?php include_once locate_template('/components/nav_two.php'); ?>
+<body>
+	<?php //include_once locate_template('/components/bar.php');?>
+    <?php include_once locate_template('/components/nav.php'); ?>
 
         <div class="breadcrumb">
             <div class="container">
