@@ -19,8 +19,8 @@
 
                 if (has_custom_logo()):
             ?>
-                    <a class="logo" href="<?= home_url(); ?>">
-                        <img src="<?= esc_url($logo[0]); ?>" alt="Logo.">
+                    <a class="logo" href="<?php home_url(); ?>">
+                        <img src="<?php esc_url($logo[0]); ?>" alt="Logo.">
                     </a>
             <?php
                 else:

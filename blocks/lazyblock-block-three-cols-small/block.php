@@ -4,16 +4,16 @@
             <?php foreach($attributes['repeater'] as $inner): ?>
                 <div>
                     <?php if (isset($inner['image']['url'])) : ?>
-                        <img src="<?= esc_url($inner['image']['url']); ?>" alt="<?= esc_attr($inner['image']['alt']); ?>">
+                        <img src="<?php esc_url($inner['image']['url']); ?>" alt="<?php esc_attr($inner['image']['alt']); ?>">
                     <?php endif; ?>
                     <?php if (!empty($inner['subtitle'])) : ?>
-                        <h3><?= $inner['subtitle']; ?></h3>
+                        <h3><?php $inner['subtitle']; ?></h3>
                     <?php endif; ?>
                     <?php if (!empty($inner['sub-description'])) : ?>
-                        <p class="text"><?= $inner['sub-description']; ?></p>
+                        <p class="text"><?php $inner['sub-description']; ?></p>
                     <?php endif; ?>
                     <?php if (!empty($inner['link'])) : ?>
-                        <a class="btn btn-primary" href="<?= esc_url($inner['link']); ?>"><?= $inner['button']; ?></a>
+                        <a class="btn btn-primary" href="<?php esc_url($inner['link']); ?>"><?php $inner['button']; ?></a>
                     <?php endif; ?>
                 </div>
             <?php endforeach; ?>

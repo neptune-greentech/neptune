@@ -1,6 +1,6 @@
 <section>
     <div class="container">
-        <h2><?= $attributes['title']; ?></h2>
+        <h2><?php $attributes['title']; ?></h2>
 
         <div class="testimonials">
             <div class="prev">
@@ -19,8 +19,8 @@
                         <div class="slider_inner">
 							<?php foreach($attributes['repeater'] as $inner): ?>
 								<div class="slide">
-									<p><?= $inner['quote']; ?></p>
-									<p><?= $inner['author']; ?></p>
+									<p><?php $inner['quote']; ?></p>
+									<p><?php $inner['author']; ?></p>
 								</div>
 							<?php endforeach; ?>
                         </div>

@@ -1,20 +1,20 @@
-<section class="layering <?= $attributes['reverse'] ? 'reverse' : ''  ?> <?= $attributes['background'] ? 'bg' : ''  ?>">
+<section class="layering <?php $attributes['reverse'] ? 'reverse' : ''  ?> <?php $attributes['background'] ? 'bg' : ''  ?>">
     <div class="container grid">
         <?php if (!empty($attributes['title'])) : ?>
-            <h2><?= $attributes['title']; ?></h2>
+            <h2><?php $attributes['title']; ?></h2>
         <?php endif; ?>
 
         <div class="cols">
             <div>
             <?php if (isset($attributes['image']['url'])) : ?>
-                <img src="<?= esc_url($attributes['image']['url']); ?>" alt="<?= esc_attr($attributes['image']['alt']); ?>">
+                <img src="<?php esc_url($attributes['image']['url']); ?>" alt="<?php esc_attr($attributes['image']['alt']); ?>">
             <?php endif; ?>
             </div>
             <div class="card">
-                <h3><?= $attributes['subtitle']; ?></h3>
-                <p><?= $attributes['description']; ?></p>
+                <h3><?php $attributes['subtitle']; ?></h3>
+                <p><?php $attributes['description']; ?></p>
                 <?php if (!empty($attributes['link'])) : ?>
-                    <a class="btn btn-secondary" href="<?= esc_url($attributes['link']); ?>"><?= $attributes['button']; ?></a>
+                    <a class="btn btn-secondary" href="<?php esc_url($attributes['link']); ?>"><?php $attributes['button']; ?></a>
                 <?php endif; ?>
             </div>
         </div>

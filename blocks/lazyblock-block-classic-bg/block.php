@@ -1,13 +1,13 @@
-<section class="section13 bg" style="background-image: url('<?= esc_url($attributes['image']['url']); ?>')">
+<section class="section13 bg" style="background-image: url('<?php esc_url($attributes['image']['url']); ?>')">
     <div class="container grid">
         <?php if (!empty($attributes['tagline'])) : ?>
-            <p class="tagline"><?= $attributes['tagline']; ?></p>
+            <p class="tagline"><?php $attributes['tagline']; ?></p>
         <?php endif; ?>
         <?php if (!empty($attributes['title'])) : ?>
-            <h2><?= $attributes['title']; ?></h2>
+            <h2><?php $attributes['title']; ?></h2>
         <?php endif; ?>
         <?php if (!empty($attributes['description'])) : ?>
-            <p class="text"><?= $attributes['description']; ?></p>
+            <p class="text"><?php $attributes['description']; ?></p>
         <?php endif; ?>
     </div>
 </section>
