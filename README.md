@@ -1,7 +1,7 @@
 # Neptune
 
-A green wordpress theme.
-Since a lot of people is using wordpress, and considering our ecological ideology, we want to provide people a way to reduce their carbon footprint, without changing their CMS.
+A green WordPress theme.
+Since a lot of people is using WordPress, and considering our ecological ideology, we want to provide people a way to reduce their carbon footprint, without changing their CMS.
 
 -   [Theme](#theme)
     -   [Customizer](#page-editor)
@@ -19,7 +19,7 @@ Since a lot of people is using wordpress, and considering our ecological ideolog
 
 We do not see ourselves as experts but rather as scouts who want a cleaner world.
 
-This optimization of Wordpress and theme is designed based on green tech principles.
+This optimization of WordPress and theme is designed based on green tech principles.
 
 It allows you to benefit from a site whose pages will have a reduced carbon footprint of at least -70% compared to the average site.
 
@@ -45,10 +45,10 @@ _Here are some information for development purpose._
 
 #### Cleanup
 
-This theme is all about the `config\clean` file. A lot of native things from wordpress have been disabled from this file.
+This theme is all about the `config\clean` file. A lot of native things from WordPress have been disabled from this file.
 
 -   **api:** Since we don't use the api in this theme, the API is disabled in the `config\clean.php` file.
--   **wp-embed:** Other wordpress posts embeds are disable in `config/clean.php`
+-   **wp-embed:** Other WordPress posts embeds are disable in `config/clean.php`
 -   **emojis:** Emojis are disabled in `config\clean.php`
 -   **head:** A big cleanup has been made in the head output of pages in the `config\clean.php`
 
@@ -86,7 +86,7 @@ function neptune_customizer_options( $wp_customize ) {
 }
 ```
 
-> _Please refer to the [Customizer Objects](https://developer.wordpress.org/themes/customize-api/customizer-objects/) section of the official Wordpress documentation if needed._
+> _Please refer to the [Customizer Objects](https://developer.WordPress.org/themes/customize-api/customizer-objects/) section of the official WordPress documentation if needed._
 
 ##### Controls linked to the css
 
@@ -116,7 +116,7 @@ $neptuneCustomVars = [
 ];
 ```
 
-> _Note that we are setting the value of `--color-background` by passing the ID of the control we declared before to the [`get_theme_mod()`](https://developer.wordpress.org/reference/functions/get_theme_mod/) method_.
+> _Note that we are setting the value of `--color-background` by passing the ID of the control we declared before to the [`get_theme_mod()`](https://developer.WordPress.org/reference/functions/get_theme_mod/) method_.
 
 Under the hood, the `bundle.js` receive an object of that array and the `NeptuneCustomizer.js` class loop through that object to update the css var defined in the `:root` pseudo-class in `assets/scss`.
 
