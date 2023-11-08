@@ -1,5 +1,5 @@
 <section class="contact">
     <div class="container grid">
-        <?php do_shortcode($attributes['shortcode-form']); ?>
+        <?php echo do_shortcode($attributes['shortcode-form']); ?>
     </div>
 </section>

@@ -1,5 +1,5 @@
 <section class="content">
     <div class="container max grid">
-        <?php $attributes['content']; ?>
+        <?php echo $attributes['content']; ?>
     </div>
 </section>

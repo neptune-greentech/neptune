@@ -2,7 +2,7 @@
 
 <header class="hero bg">
     <div class="container grid">
-        <h1><?php single_cat_title(); ?></h1>
+        <h1><?php echo single_cat_title(); ?></h1>
     </div>
 </header>
 
