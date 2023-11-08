@@ -1,0 +1,9 @@
+.container {
+    width: 90vw;
+    max-width: rem(80);
+    &.max {
+        max-width: rem(50);
+    }
+    margin-right: auto;
+    margin-left: auto;
+}

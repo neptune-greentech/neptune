@@ -1,0 +1,804 @@
+{
+   "domain": "lazy-blocks",
+   "locale_data": {
+      "lazy-blocks": {
+         "": {
+            "domain": "lazy-blocks"
+         },
+         "Lazy Blocks": [
+            ""
+         ],
+         "Gutenberg blocks visual constructor. Custom meta fields or blocks with output without hard coding.": [
+            ""
+         ],
+         "Lazy Blocks Team": [
+            ""
+         ],
+         "https://www.lazyblocks.com/?utm_source=wordpress.org&utm_medium=readme&utm_campaign=byline": [
+            ""
+         ],
+         "Documentation": [
+            ""
+         ],
+         "Go Pro": [
+            ""
+         ],
+         "and": [
+            ""
+         ],
+         "Blocks": [
+            ""
+         ],
+         "Block": [
+            ""
+         ],
+         "Duplicate “%1$s”": [
+            ""
+         ],
+         "Duplicate": [
+            ""
+         ],
+         "Export “%1$s”": [
+            ""
+         ],
+         "Export": [
+            ""
+         ],
+         "Icon": [
+            ""
+         ],
+         "Category": [
+            ""
+         ],
+         "Description": [
+            ""
+         ],
+         "Basic": [
+            ""
+         ],
+         "Content": [
+            ""
+         ],
+         "Choice": [
+            ""
+         ],
+         "Advanced": [
+            ""
+         ],
+         "Layout": [
+            ""
+         ],
+         "Deprecated": [
+            ""
+         ],
+         "Lazy Blocks and Lazy Blocks Pro should not be active at the same time. We've automatically deactivated Lazy Blocks.": [
+            ""
+         ],
+         "Lazy Blocks and Lazy Blocks Pro should not be active at the same time. We've automatically deactivated Lazy Blocks Pro.": [
+            ""
+         ],
+         "Hook %1$s is <strong>deprecated</strong> since version %2$s! Use %3$s instead.": [
+            ""
+         ],
+         "Example Block": [
+            ""
+         ],
+         "Example block that helps you to get started with Lazy Blocks plugin": [
+            ""
+         ],
+         "Sorry, you are not allowed to read Gutenberg blocks of this post.": [
+            ""
+         ],
+         "Sorry, you are not allowed to read Gutenberg blocks as this user.": [
+            ""
+         ],
+         "Sorry, you are not allowed to read Gutenberg blocks data.": [
+            ""
+         ],
+         "Sorry, you are not allowed to read Gutenberg blocks data as this user.": [
+            ""
+         ],
+         "Invalid block.": [
+            ""
+         ],
+         "Render callback is not specified.": [
+            ""
+         ],
+         "Templates": [
+            ""
+         ],
+         "Template": [
+            ""
+         ],
+         "Post Types": [
+            ""
+         ],
+         "Template Lock": [
+            ""
+         ],
+         "All": [
+            ""
+         ],
+         "Insert": [
+            ""
+         ],
+         "Export / Import": [
+            ""
+         ],
+         "No file selected": [
+            ""
+         ],
+         "Error uploading file. Please try again": [
+            ""
+         ],
+         "Incorrect file type": [
+            ""
+         ],
+         "Import file empty": [
+            ""
+         ],
+         "Imported %s block": [
+            "",
+            "Imported %s blocks"
+         ],
+         "Imported %s template": [
+            "",
+            "Imported %s templates"
+         ],
+         "Template for these post types '%s' already exists.": [
+            ""
+         ],
+         "Added new block '%s'.": [
+            ""
+         ],
+         "Checkbox": [
+            ""
+         ],
+         "Classic Editor (WYSIWYG)": [
+            ""
+         ],
+         "Code Editor": [
+            ""
+         ],
+         "Color Picker": [
+            ""
+         ],
+         "Date Time Picker": [
+            ""
+         ],
+         "Email": [
+            ""
+         ],
+         "File": [
+            ""
+         ],
+         "Gallery": [
+            ""
+         ],
+         "Image": [
+            ""
+         ],
+         "Inner Blocks": [
+            ""
+         ],
+         "Number": [
+            ""
+         ],
+         "Password": [
+            ""
+         ],
+         "Radio": [
+            ""
+         ],
+         "Range": [
+            ""
+         ],
+         "Repeater": [
+            ""
+         ],
+         "Rich Text (WYSIWYG)": [
+            ""
+         ],
+         "Select": [
+            ""
+         ],
+         "Text": [
+            ""
+         ],
+         "Text Area": [
+            ""
+         ],
+         "Toggle": [
+            ""
+         ],
+         "Undefined": [
+            ""
+         ],
+         "URL": [
+            ""
+         ],
+         "Template file <code>%1$s</code> not found.": [
+            ""
+         ],
+         "None": [
+            ""
+         ],
+         "All - prevents all operations": [
+            ""
+         ],
+         "Insert - prevents inserting new blocks, but allows moving existing ones": [
+            ""
+         ],
+         "Content Only - prevents all operations, except the content editing.": [
+            ""
+         ],
+         "Template Settings": [
+            ""
+         ],
+         "Select all": [
+            ""
+         ],
+         "Copy to Clipboard": [
+            ""
+         ],
+         "Export JSON": [
+            ""
+         ],
+         "Generate PHP": [
+            ""
+         ],
+         "Export Blocks": [
+            ""
+         ],
+         "Export Templates": [
+            ""
+         ],
+         "Import": [
+            ""
+         ],
+         "Copied!": [
+            ""
+         ],
+         "Control": [
+            ""
+         ],
+         "Search Icon": [
+            ""
+         ],
+         "Type to Search…": [
+            ""
+         ],
+         "No icons found.": [
+            ""
+         ],
+         "Icon Picker": [
+            ""
+         ],
+         "Error loading block preview: %s": [
+            ""
+         ],
+         "Only a single <InnerBlocks /> component can be used per block. Multiple <InnerBlocks /> found inside block \"%s\".": [
+            ""
+         ],
+         "Lazy Blocks Pro": [
+            ""
+         ],
+         "Upgrade Now": [
+            ""
+         ],
+         "Controls Conditional Logic": [
+            ""
+         ],
+         "Panels and Dividers": [
+            ""
+         ],
+         "Posts, Taxonomy, User Controls": [
+            ""
+         ],
+         "Blocks Preloading": [
+            ""
+         ],
+         "SEO Enhancements": [
+            ""
+         ],
+         "And much more…": [
+            ""
+         ],
+         "This field is required": [
+            ""
+         ],
+         "Styles": [
+            ""
+         ],
+         "Supports": [
+            ""
+         ],
+         "Supports Ghost Kit": [
+            ""
+         ],
+         "Condition": [
+            ""
+         ],
+         "Blocks Constructor": [
+            ""
+         ],
+         "Error: Could not generate the preview.": [
+            ""
+         ],
+         "Preview": [
+            ""
+         ],
+         "Control \"%1$s\"": [
+            ""
+         ],
+         "Frontend": [
+            ""
+         ],
+         "Editor": [
+            ""
+         ],
+         "Output Method": [
+            ""
+         ],
+         "HTML + Handlebars": [
+            ""
+         ],
+         "PHP": [
+            ""
+         ],
+         "Theme Template": [
+            ""
+         ],
+         "How to use?": [
+            ""
+         ],
+         "Simple text field example see here:": [
+            ""
+         ],
+         "Note 1: if you use blocks as Metaboxes, you may leave this code editor blank.": [
+            ""
+         ],
+         "Note 2: supported custom PHP callback to output block": [
+            ""
+         ],
+         "Single output code for Frontend and Editor": [
+            ""
+         ],
+         "To output block code, Lazy Blocks will look for template file in your theme directory:": [
+            ""
+         ],
+         "Read more:": [
+            ""
+         ],
+         "How to use theme template": [
+            ""
+         ],
+         "Code Output in Editor": [
+            ""
+         ],
+         "Display Always": [
+            ""
+         ],
+         "Display within `selected` block only": [
+            ""
+         ],
+         "Display within `unselected` block only": [
+            ""
+         ],
+         "Never Display": [
+            ""
+         ],
+         "Code": [
+            ""
+         ],
+         "Show in posts": [
+            ""
+         ],
+         "In all posts by default": [
+            ""
+         ],
+         "Loading…": [
+            ""
+         ],
+         "(no label)": [
+            ""
+         ],
+         "(copy)": [
+            ""
+         ],
+         "Do you really want to remove control?": [
+            ""
+         ],
+         "Remove": [
+            ""
+         ],
+         "Add Child Control": [
+            ""
+         ],
+         "Add Control": [
+            ""
+         ],
+         "Content Controls": [
+            ""
+         ],
+         "Inspector Controls": [
+            ""
+         ],
+         "Hidden": [
+            ""
+         ],
+         "Slug": [
+            ""
+         ],
+         "Block slug must include only lowercase alphanumeric characters or dashes, and start with a letter. Example: lazyblock/my-custom-block": [
+            ""
+         ],
+         "Select category": [
+            ""
+         ],
+         "Keywords": [
+            ""
+         ],
+         "Make it easier to discover a block with keyword aliases": [
+            ""
+         ],
+         "Type keyword and push Enter": [
+            ""
+         ],
+         "Select control to see settings.": [
+            ""
+         ],
+         "Default value": [
+            ""
+         ],
+         "Appears when inserting a new block": [
+            ""
+         ],
+         "Help text": [
+            ""
+         ],
+         "Instructions under control": [
+            ""
+         ],
+         "Hide if block is not selected": [
+            ""
+         ],
+         "Yes": [
+            ""
+         ],
+         "Label": [
+            ""
+         ],
+         "This is the name which will appear on the block edit control": [
+            ""
+         ],
+         "Name": [
+            ""
+         ],
+         "Control name must include only alphanumeric characters, dashes or underscores. Example: my-control-name": [
+            ""
+         ],
+         "Placement": [
+            ""
+         ],
+         "Inspector": [
+            ""
+         ],
+         "Required": [
+            ""
+         ],
+         "Save in Meta": [
+            ""
+         ],
+         "Meta custom name (optional)": [
+            ""
+         ],
+         "Unique metabox name": [
+            ""
+         ],
+         "WPML Translation": [
+            ""
+         ],
+         "Experimental feature, may not work as expected.": [
+            ""
+         ],
+         "Type": [
+            ""
+         ],
+         "Control Type": [
+            ""
+         ],
+         "25%": [
+            ""
+         ],
+         "50%": [
+            ""
+         ],
+         "75%": [
+            ""
+         ],
+         "100%": [
+            ""
+         ],
+         "Width": [
+            ""
+         ],
+         "+ Add Style": [
+            ""
+         ],
+         "Add the style name, which will be used as class name on your block. For example, if you add the style with name `outline`, when user select this style, on the block will be added class name `is-style-outline`": [
+            ""
+         ],
+         "To see these settings in your block, you have to install Ghost Kit plugin.": [
+            ""
+         ],
+         "Read More": [
+            ""
+         ],
+         "\"Class Name\" support is required to use the following settings.": [
+            ""
+         ],
+         "Spacings": [
+            ""
+         ],
+         "Change block margins and paddings.": [
+            ""
+         ],
+         "Display": [
+            ""
+         ],
+         "Display / Hide blocks on different screen sizes.": [
+            ""
+         ],
+         "Animate on Scroll": [
+            ""
+         ],
+         "Display block with animation on scroll.": [
+            ""
+         ],
+         "Frame": [
+            ""
+         ],
+         "Add border and box shadow to block.": [
+            ""
+         ],
+         "Custom CSS": [
+            ""
+         ],
+         "Write custom CSS on each inserted blocks.": [
+            ""
+         ],
+         "Multiple": [
+            ""
+         ],
+         "Allow use block multiple times on the page.": [
+            ""
+         ],
+         "Class Name": [
+            ""
+         ],
+         "Additional field to add custom class name.": [
+            ""
+         ],
+         "Anchor": [
+            ""
+         ],
+         "Additional field to add block ID attribute.": [
+            ""
+         ],
+         "Inserter": [
+            ""
+         ],
+         "Show block in blocks inserter.": [
+            ""
+         ],
+         "Reusable": [
+            ""
+         ],
+         "Allow converting block into reusable block.": [
+            ""
+         ],
+         "Lock": [
+            ""
+         ],
+         "Allow block locking/unlocking by a user.": [
+            ""
+         ],
+         "Align": [
+            ""
+         ],
+         "Select align options": [
+            ""
+         ],
+         "Block Name": [
+            ""
+         ],
+         "Free Content": [
+            ""
+         ],
+         "Block used for adding blocks inside it in cases when template locked from adding blocks.": [
+            ""
+         ],
+         "Alongside Text": [
+            ""
+         ],
+         "Displays text alongside the checkbox": [
+            ""
+         ],
+         "Checked": [
+            ""
+         ],
+         "Classic": [
+            ""
+         ],
+         "Displays text alongside the color indicator": [
+            ""
+         ],
+         "Alpha Channel": [
+            ""
+         ],
+         "Allow set semi-transparent colors": [
+            ""
+         ],
+         "Color Palette": [
+            ""
+         ],
+         "Display color palette with predefined colors": [
+            ""
+         ],
+         "Output Format": [
+            ""
+         ],
+         "Allows you to change attribute output format": [
+            ""
+         ],
+         "Color": [
+            ""
+         ],
+         "Array (Color + Slug)": [
+            ""
+         ],
+         "Select Date": [
+            ""
+         ],
+         "Select Date and Time": [
+            ""
+         ],
+         "Select Time": [
+            ""
+         ],
+         "Date": [
+            ""
+         ],
+         "Time": [
+            ""
+         ],
+         "Placeholder": [
+            ""
+         ],
+         "Characters Limit": [
+            ""
+         ],
+         "Maximum number of characters allowed. Leave blank to no limit.": [
+            ""
+         ],
+         "file": [
+            ""
+         ],
+         "Remove File": [
+            ""
+         ],
+         "Allowed Mime Types": [
+            ""
+         ],
+         "If nothing selected, all file types will be allowed to use.": [
+            ""
+         ],
+         "images": [
+            ""
+         ],
+         "Edit Gallery": [
+            ""
+         ],
+         "Medium": [
+            ""
+         ],
+         "Preview Size": [
+            ""
+         ],
+         "image": [
+            ""
+         ],
+         "Remove Image": [
+            ""
+         ],
+         "Allow insert from URL": [
+            ""
+         ],
+         "Will be added option that allow you to use custom URL to insert image": [
+            ""
+         ],
+         "The Inner Blocks control deprecated since v3.4.0, you should migrate to the <InnerBlocks /> component as this control will be removed in future plugin updates.": [
+            ""
+         ],
+         "Minimum Value": [
+            ""
+         ],
+         "Maximum Value": [
+            ""
+         ],
+         "Step Size": [
+            ""
+         ],
+         "Allow Null": [
+            ""
+         ],
+         "Allows you to reset selected option value to null": [
+            ""
+         ],
+         "Value": [
+            ""
+         ],
+         "Both (Array)": [
+            ""
+         ],
+         "Row {{#}}": [
+            ""
+         ],
+         "+ Add Row": [
+            ""
+         ],
+         "Toggle all": [
+            ""
+         ],
+         "Show Child Controls": [
+            ""
+         ],
+         "Hide Child Controls": [
+            ""
+         ],
+         "Row Label": [
+            ""
+         ],
+         "Example: \"My row number {{#}} with inner control {{control_name}}\"": [
+            ""
+         ],
+         "Add Button Label": [
+            ""
+         ],
+         "Minimum Rows": [
+            ""
+         ],
+         "Maximum Rows": [
+            ""
+         ],
+         "Collapsible Rows": [
+            ""
+         ],
+         "Collapsed by Default": [
+            ""
+         ],
+         "Multiline": [
+            ""
+         ],
+         "Choices": [
+            ""
+         ],
+         "+ Add Choice": [
+            ""
+         ],
+         "-- Select --": [
+            ""
+         ],
+         "Allows you to select multiple values": [
+            ""
+         ],
+         "Displays text alongside the toggle": [
+            ""
+         ],
+         "Looks like this control does not exists.": [
+            ""
+         ]
+      }
+   }
+}

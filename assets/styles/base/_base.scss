@@ -1,0 +1,39 @@
+html {
+    font-size: $size-default;
+    @media (min-width: $from-tiny) and (max-width: $to-small) {
+        font-size: $size-tiny;
+    }
+    @media (min-width: $from-small) and (max-width: $to-medium) {
+        font-size: $size-small;
+    }
+    @media (min-width: $from-medium) and (max-width: $to-large) {
+        font-size: $size-medium;
+    }
+    @media (min-width: $from-large) and (max-width: $to-big) {
+        font-size: $size-large;
+    }
+    @media (min-width: $from-big) and (max-width: $to-huge) {
+        font-size: $size-big;
+    }
+    @media (min-width: $from-huge) and (max-width: $to-enormous) {
+        font-size: $size-huge;
+    }
+    @media (min-width: $from-enormous) and (max-width: $to-gigantic) {
+        font-size: $size-enormous;
+    }
+    @media (min-width: $from-gigantic) and (max-width: $to-colossal) {
+        font-size: $size-gigantic;
+    }
+    @media (min-width: $from-colossal) {
+        font-size: $size-colossal;
+    }
+}
+
+body {
+    background: $color-backround;
+    overscroll-behavior: none;
+    font-family: 'Inter', sans-serif;
+    &.no-scroll {
+        overflow: hidden;
+    }
+}

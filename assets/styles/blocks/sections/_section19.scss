@@ -1,0 +1,12 @@
+.section19 {
+    .grid {
+        @include grid(rem(1));
+    }
+    h2 {
+        text-align: center;
+        margin: 0 auto;
+        @media (min-width: $from-small) {
+            margin-bottom: rem(1);
+        }
+    }
+}

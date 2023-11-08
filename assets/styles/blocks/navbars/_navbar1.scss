@@ -1,0 +1,105 @@
+.navbar1 {
+    height: rem(6);
+    @include flexCenterCenter;
+    position: relative;
+    z-index: 1;
+    background: $color-primary;
+    .grid {
+        @include flexCenterSpaceBetween(rem(1), false);
+    }
+    .logo {
+        width: rem(12);
+        img {
+            width: 100%;
+        }
+    }
+    .icon {
+        width: rem(2.5);
+        height: rem(2.5);
+        @include flexCenterCenter(0);
+        cursor: pointer;
+        span {
+            display: block;
+            width: 75%;
+            height: 2px;
+            background: $color-dark;
+            transition: transform 0.2s $ease;
+            &:nth-of-type(2) {
+                margin: 6px 0;
+            }
+        }
+        @media (max-width: $to-medium) {
+            &.active {
+                span {
+                    &:first-of-type {
+                        transform: rotate(-45deg) translate(-5.5px, 5.5px);
+                    }
+                    &:nth-of-type(2) {
+                        transform: scaleX(0);
+                    }
+                    &:last-of-type {
+                        transform: rotate(45deg) translate(-5.5px, -5.5px);
+                    }
+                }
+            }
+        }
+        @media (min-width: $from-medium) {
+            display: none;
+        }
+    }
+    .nav {
+        @include flexCenterStart(rem(1.25));
+        @media (max-width: $to-medium) {
+            overflow-y: auto;
+            width: 100%;
+            padding: 0 5vw rem(2);
+            background: $color-primary;
+            position: absolute;
+            top: rem(6);
+            left: 0;
+            height: calc(100vh - 6rem);
+            opacity: 0;
+            visibility: hidden;
+            transform: translate3d(0, rem(-2), 0);
+            transform-style: preserve-3d;
+            transition: opacity 0.2s $ease, visibility 0.2s $ease, transform 0.2s $ease;
+            &.active {
+                opacity: 1;
+                visibility: visible;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+        @media (min-width: $from-medium) {
+            display: flex;
+        }
+    }
+    .menu {
+        @include flexCenterStart(rem(2));
+        @media (max-width: $to-medium) {
+            gap: rem(0.5);
+            width: 100%;
+        }
+        li {
+            @media (max-width: $to-medium) {
+                width: 100%;
+                font-size: rem(1.8);
+            }
+        }
+        a {
+            color: $color-dark;
+            @media (max-width: $to-medium) {
+                width: 100%;
+                padding: rem(0.75) 0;
+            }
+            @media (min-width: $from-medium) {
+                padding: rem(0.75);
+            }
+        }
+    }
+    .buttons {
+        @include flexCenterStart(rem(1));
+        @media (max-width: $to-medium) {
+            width: 100%;
+        }
+    }
+}

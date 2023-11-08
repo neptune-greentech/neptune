@@ -1,0 +1,38 @@
+.section21 {
+    .grid {
+        @include grid(rem(2));
+    }
+    h2 {
+        text-align: center;
+        @media (min-width: $from-small) {
+            margin-bottom: rem(2);
+        }
+    }
+    .grid-3 {
+        @include grid(rem(1));
+        @media (min-width: $from-small) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        h3 {
+            @media (min-width: $from-small) {
+                grid-column: 1 / 4;
+            }
+        }
+        > div {
+            background: $color-primary;
+            padding: rem(1);
+        }
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: contain;
+    }
+    .btn {
+        @media (min-width: $from-medium) {
+            width: fit-content;
+            margin-top: rem(1);
+        }
+    }
+}

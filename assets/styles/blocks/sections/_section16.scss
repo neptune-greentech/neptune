@@ -1,0 +1,30 @@
+.section16 {
+    .grid-2 {
+        @include grid(rem(2));
+        @media (min-width: $from-small) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: rem(4);
+        }
+        > div {
+            background: $color-primary;
+            > div {
+                @include grid(rem(1));
+                padding: rem(1.5);
+                @media (min-width: $from-medium) {
+                    padding: rem(3);
+                }
+            }
+        }
+    }
+    img {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+    }
+    .btn {
+        @media (min-width: $from-medium) {
+            width: fit-content;
+            margin-top: rem(1);
+        }
+    }
+}

@@ -1,0 +1,38 @@
+.gallery {
+    .grid {
+        @include grid(rem(2));
+        @media all and (min-width: $from-medium) {
+            gap: rem(4);
+        }
+    }
+    &_slider {
+        overflow: hidden;
+        position: relative;
+        height: rem(26);
+        &_inner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            gap: rem(1);
+            pointer-events: none;
+        }
+    }
+    &_slide {
+        width: rem(16);
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+@media all and (min-width: $from-medium) {
+    .gallery {
+        &_slide {
+            width: rem(36);
+        }
+    }
+}

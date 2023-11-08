@@ -1,0 +1,35 @@
+.section11 {
+    .grid-2 {
+        @include grid(rem(2));
+        @media (min-width: $from-small) {
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: rem(4);
+            row-gap: 0;
+        }
+        @media (min-width: $from-medium) {
+            column-gap: rem(8);
+            row-gap: 0;
+        }
+        > div {
+            @include grid(rem(1));
+            &:nth-of-type(even) {
+                @media (min-width: $from-small) {
+                    margin-top: rem(4);
+                }
+                @media (min-width: $from-medium) {
+                    margin-top: rem(8);
+                }
+            }
+        }
+        h2 {
+            @media (min-width: $from-medium) {
+                margin-top: rem(1);
+            }
+        }
+    }
+    img {
+        width: 100%;
+        aspect-ratio: 9 / 10;
+        object-fit: cover;
+    }
+}

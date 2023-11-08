@@ -1,0 +1,32 @@
+.section5 {
+    &.center {
+        .grid > p,
+        h2 {
+            text-align: center;
+            margin: 0 auto;
+        }
+    }
+    .grid {
+        @include grid(rem(1));
+    }
+    .grid-4 {
+        @include grid(rem(2));
+        margin-top: rem(1);
+        @media (min-width: $from-small) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media (min-width: $from-medium) {
+            grid-template-columns: repeat(4, 1fr);
+            margin-top: rem(3);
+        }
+        div {
+            @include grid(rem(1));
+        }
+    }
+    .btn {
+        margin-top: rem(1);
+        @media (min-width: $from-small) {
+            width: fit-content;
+        }
+    }
+}

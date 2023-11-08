@@ -1,0 +1,37 @@
+header:not(.bg),
+section:not(.bg) {
+    margin: rem(4) 0;
+    @media (min-width: $from-medium) {
+        margin: rem(12) 0;
+    }
+    p,
+    h1,
+    h2,
+    h3 {
+        color: $color-dark;
+    }
+}
+
+header.bg,
+section.bg {
+    padding: rem(4) 0;
+    @media (min-width: $from-medium) {
+        padding: rem(12) 0;
+    }
+    p,
+    h1,
+    h2,
+    h3 {
+        color: $color-dark;
+    }
+}
+
+.card {
+    background: var(--color-white);
+    border: 1px solid var(--color-dark);
+    padding: rem(1.5);
+    @include grid(rem(1));
+    @media (min-width: $from-medium) {
+        padding: rem(3);
+    }
+}

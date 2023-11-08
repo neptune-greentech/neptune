@@ -1,0 +1,47 @@
+h1 {
+    font-size: rem(4.5);
+    font-weight: 300;
+    line-height: 1.2;
+    @media (min-width: $from-small) {
+        font-size: rem(10);
+    }
+}
+
+h2 {
+    font-size: rem(3.5);
+    font-weight: 300;
+    line-height: 1.2;
+    @media (min-width: $from-small) {
+        font-size: rem(5);
+        max-width: rem(48);
+    }
+}
+
+h3 {
+    font-size: rem(2);
+    font-weight: 300;
+    line-height: 1.2;
+    @media (min-width: $from-small) {
+        font-size: rem(2.4);
+    }
+}
+
+p {
+    line-height: 1.5;
+    font-size: rem(1.1);
+    &::empty {
+        display: none;
+    }
+    &.tagline {
+        font-weight: 500;
+    }
+    &.text {
+        max-width: rem(26);
+    }
+    &.text-big {
+        font-size: rem(1.5);
+        @media (min-width: $from-medium) {
+            font-size: rem(1.8);
+        }
+    }
+}

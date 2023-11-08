@@ -1,0 +1,25 @@
+.section20 {
+    img {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+    }
+    .grid-3 {
+        @include grid(rem(2));
+        @media (min-width: $from-small) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @media (min-width: $from-medium) {
+            row-gap: rem(4);
+        }
+        div {
+            @include grid(rem(1));
+        }
+    }
+    .btn {
+        @media (min-width: $from-small) {
+            width: fit-content;
+            margin-top: rem(1);
+        }
+    }
+}

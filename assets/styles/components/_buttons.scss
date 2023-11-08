@@ -1,0 +1,17 @@
+.btn {
+    @include flexCenterCenter(rem(1));
+    width: 100%;
+    padding: rem(1.25) rem(2.5);
+    border: 1px solid $color-dark;
+    @media all and (min-width: $from-medium) {
+        width: fit-content;
+    }
+    &-secondary {
+        color: $color-white;
+        background: $color-dark;
+    }
+    &-tertiary {
+        color: $color-white;
+        border-color: $color-white;
+    }
+}

@@ -1,0 +1,15 @@
+.content {
+    .grid {
+        display: grid;
+        gap: rem(1);
+        @media (min-width: $from-small) {
+            gap: rem(2);
+        }
+    }
+    h2 {
+        font-size: rem(2.5);
+        @media (min-width: $from-small) {
+            font-size: rem(3.2);
+        }
+    }
+}

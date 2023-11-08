@@ -1,0 +1,54 @@
+label {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    width: 100%;
+    padding: rem(1.5);
+    background: var(--color-white);
+    border: 1px solid var(--color-primary);
+    outline: none;
+    font-size: rem(1.2);
+    margin-top: rem(0.5);
+    @media (min-width: $from-medium) {
+        padding: rem(2);
+    }
+    &:focus {
+        border: 1px solid var(--color-dark);
+    }
+    &::placeholder {
+        font-size: rem(1.2);
+        color: var(--color-gray);
+    }
+    &[type='submit'] {
+        width: fit-content;
+    }
+}
+
+textarea {
+    width: 100%;
+    padding: rem(1.5);
+    background: var(--color-white);
+    border: 1px solid var(--color-primary);
+    outline: none;
+    font-size: rem(1.2);
+    height: 10rem;
+    resize: none;
+    line-height: 1.4;
+    margin-top: rem(0.5);
+    @media (min-width: $from-medium) {
+        padding: rem(2);
+    }
+    &:focus {
+        border: 1px solid var(--color-dark);
+    }
+    &::placeholder {
+        font-size: rem(1.2);
+        color: var(--color-gray);
+    }
+}
+
+.wpcf7-not-valid-tip {
+    margin-top: rem(0.5);
+}

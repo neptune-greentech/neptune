@@ -1,0 +1,23 @@
+.section18 {
+    .grid {
+        @include grid(rem(1));
+        > p,
+        > h2 {
+            text-align: center;
+            margin: 0 auto;
+        }
+    }
+    .grid-2 {
+        @include grid(rem(2));
+        margin-top: rem(1);
+        @media (min-width: $from-small) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media (min-width: $from-medium) {
+            margin-top: rem(3);
+        }
+        div {
+            @include grid(rem(1));
+        }
+    }
+}

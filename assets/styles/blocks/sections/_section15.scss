@@ -1,0 +1,46 @@
+.section15 {
+    .grid-2 {
+        @include grid(rem(2));
+        @media (min-width: $from-small) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: rem(4);
+        }
+        > div {
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            position: relative;
+            &::before {
+                content: '';
+                width: 100%;
+                height: 100%;
+                background: rgba(#000, 0.5);
+                position: absolute;
+                inset: 0;
+            }
+            @include flexEnd(rem(1));
+            aspect-ratio: 1;
+            padding: rem(1.5);
+            @media (min-width: $from-medium) {
+                padding: rem(3);
+            }
+        }
+        p,
+        h3,
+        .btn {
+            position: relative;
+        }
+        .btn {
+            @media (min-width: $from-medium) {
+                width: fit-content;
+                margin-top: rem(1);
+            }
+        }
+    }
+    &:not(.bg) {
+        p,
+        h3 {
+            color: $color-white;
+        }
+    }
+}

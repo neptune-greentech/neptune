@@ -1,0 +1,39 @@
+.place {
+    .col-2 {
+        display: grid;
+        gap: rem(2);
+    }
+    h2 {
+        margin-bottom: rem(1);
+    }
+    p {
+        font-size: rem(1.6);
+        &:not(:last-of-type) {
+            margin-bottom: rem(0.5);
+        }
+    }
+    span {
+        width: 100%;
+        height: 1px;
+        background: var(--color-gray);
+        margin-top: rem(4);
+    }
+}
+
+@media all and (min-width: $from-medium) {
+    .place {
+        h2 {
+            font-size: rem(3.6);
+            max-width: none;
+        }
+        .col-2 {
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+            .col {
+                &:not(:last-of-type) {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

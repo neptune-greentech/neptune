@@ -1,0 +1,19 @@
+.numbers {
+    background: $color-primary;
+    .grid {
+        @include grid(rem(1));
+    }
+    .grid-4 {
+        @include grid(rem(2));
+        margin-top: rem(1);
+        @media (min-width: $from-medium) {
+            grid-template-columns: repeat(4, 1fr);
+            align-items: stretch;
+            gap: rem(2);
+            margin-top: rem(3);
+        }
+        div {
+            @include grid(rem(1));
+        }
+    }
+}

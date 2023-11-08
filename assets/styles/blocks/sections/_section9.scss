@@ -1,0 +1,27 @@
+.section9 {
+    img {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+    }
+    .grid-3 {
+        @include grid(0);
+        @media (min-width: $from-small) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        div {
+            @include grid(rem(1));
+            padding: rem(1.5);
+            background: $color-primary;
+            @media (min-width: $from-medium) {
+                padding: rem(3);
+            }
+        }
+    }
+    .btn {
+        @media (min-width: $from-small) {
+            width: fit-content;
+            margin-top: rem(1);
+        }
+    }
+}

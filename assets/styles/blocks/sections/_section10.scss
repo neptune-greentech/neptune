@@ -1,0 +1,21 @@
+.section10 {
+    overflow: hidden;
+    .grid {
+        @include flexCenterWrap(rem(0.5), rem(2));
+    }
+    h2 {
+        text-align: center;
+        &:not(:last-of-type) {
+            display: flex;
+            flex-direction: column;
+            gap: rem(0.5);
+            @media (min-width: $from-small) {
+                flex-direction: row;
+                gap: rem(2);
+            }
+            &::after {
+                content: '•';
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.section7 {
+    .grid {
+        @include flexCenterSpaceBetween(rem(1));
+        > div {
+            @include grid(rem(1));
+        }
+    }
+    .buttons {
+        @include flexCenterStart(rem(1));
+        margin-top: rem(1);
+        @media (min-width: $from-medium) {
+            width: fit-content;
+        }
+    }
+}

@@ -1,0 +1,8 @@
+.section17 {
+    .grid {
+        @include grid(rem(1));
+    }
+    p:last-of-type {
+        margin: rem(1) 0 0 auto;
+    }
+}

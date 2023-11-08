@@ -1,0 +1,18 @@
+.section12 {
+    .grid {
+        @include flexCenterSpaceBetween(rem(1));
+        @media (min-width: $from-medium) {
+            align-items: center;
+        }
+        > div {
+            @include grid(rem(1));
+        }
+    }
+    .buttons {
+        @include grid(rem(1));
+        @media (min-width: $from-medium) {
+            max-width: rem(18);
+            margin-left: auto;
+        }
+    }
+}

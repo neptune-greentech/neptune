@@ -1,0 +1,29 @@
+.section13 {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    @include flexCenterCenter;
+    height: 100vh;
+    min-height: rem(30);
+    position: relative;
+    &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: rgba(#000, 0.5);
+        position: absolute;
+        inset: 0;
+    }
+    .grid {
+        @include grid(rem(1));
+        position: relative;
+    }
+    &.bg {
+        p,
+        h2 {
+            text-align: center;
+            margin: 0 auto;
+            color: $color-white;
+        }
+    }
+}
