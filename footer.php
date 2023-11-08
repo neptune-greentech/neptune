@@ -7,7 +7,7 @@
 
                     if (has_custom_logo()):
                 ?>
-                        <a class="footer_logo" href="<?php echo home_url(); ?>">
+                        <a class="footer_logo" href="<?php echo esc_url(home_url()); ?>">
                             <img src="<?php echo esc_url($logo[0]); ?>" alt="Logo.">
                         </a>
                 <?php
@@ -19,6 +19,7 @@
                 <?php
                 wp_nav_menu(
                     array(
+                        'theme_location' => 'main-menu',
                         'menu' => 'main_menu',
                         'container' => 'div',
                         'container_class' => 'footer_menu',

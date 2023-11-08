@@ -15,7 +15,7 @@
         <span class="hero_overlay"></span>
     </header>
 
-    <section class="article">
+    <section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         <div class="container article_container">
 
             <?php the_content(); ?>

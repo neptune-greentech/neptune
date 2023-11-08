@@ -37,5 +37,7 @@
             
             wp_reset_postdata();
             ?>
+
+        <?php wp_link_pages( $args ); ?>
     </div>
 </section>

@@ -5,26 +5,31 @@ function neptune_customizer_colors($wp_customize) {
     $wp_customize->add_setting('neptune_background_color', [
         'default' => '#f5f5f5',
         'transport' => 'refresh',
+        'sanitize_callback' => 'esc_attr',
     ]);
 
     $wp_customize->add_setting('neptune_primary_color', [
         'default' => '#e2ebef',
         'transport' => 'refresh',
+        'sanitize_callback' => 'esc_attr',
     ]);
 
     $wp_customize->add_setting('neptune_dark_color', [
         'default' => '#28303d',
         'transport' => 'refresh',
+        'sanitize_callback' => 'esc_attr',
     ]);
 
     $wp_customize->add_setting('neptune_white_color', [
         'default' => '#fff',
         'transport' => 'refresh',
+        'sanitize_callback' => 'esc_attr',
     ]);
 
     $wp_customize->add_setting('neptune_gray_color', [
         'default' => '#d4d4d4',
         'transport' => 'refresh',
+        'sanitize_callback' => 'esc_attr',
     ]);
 
     $wp_customize->add_control(

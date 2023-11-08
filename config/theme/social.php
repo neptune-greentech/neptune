@@ -9,7 +9,7 @@ add_action('customize_register', 'neptune_customizer_social_networks');
 function neptune_customizer_social_networks($wp_customize)
 {
     $wp_customize->add_section('neptune_section_social_networks', [
-        'title' => __('Social Medias', 'neptune'),
+        'title' => 'Social Medias',
         'description' => __("Please add your social networks links. Leave empty if you don't want the social network's icon to appear.", 'neptune'),
         'priority' => 81,
     ]);
@@ -17,6 +17,7 @@ function neptune_customizer_social_networks($wp_customize)
     // LinkedIn
     $wp_customize->add_setting('neptune_social_linkedin', [
         'transport' => 'refresh',
+        'sanitize_callback' => 'esc_attr',
     ]);
 
     $wp_customize->add_control(
@@ -24,10 +25,9 @@ function neptune_customizer_social_networks($wp_customize)
             $wp_customize,
             'neptune_control_social_linkedin',
             [
-                'label' => __('LinkedIn Link', 'neptune'),
-                //'description' => __('Please enter your linkedin account link', 'neptune'),
+                'label' => 'LinkedIn Link',
                 'input_attrs' => [
-                    'placeholder' => __('https://'),
+                    'placeholder' => 'https://',
                 ],
                 'section' => 'neptune_section_social_networks',
                 'settings' => 'neptune_social_linkedin',
@@ -39,6 +39,7 @@ function neptune_customizer_social_networks($wp_customize)
     // Twitter
     $wp_customize->add_setting('neptune_social_twitter', [
         'transport' => 'refresh',
+        'sanitize_callback' => 'esc_attr',
     ]);
 
     $wp_customize->add_control(
@@ -46,10 +47,9 @@ function neptune_customizer_social_networks($wp_customize)
             $wp_customize,
             'neptune_control_social_twitter',
             [
-                'label' => __('Twitter Link', 'neptune'),
-                //'description' => __('Please enter your Twitter account link', 'neptune'),
+                'label' => 'Twitter Link',
                 'input_attrs' => [
-                    'placeholder' => __('https://', 'neptune'),
+                    'placeholder' => 'https://',
                 ],
                 'section' => 'neptune_section_social_networks',
                 'settings' => 'neptune_social_twitter',
@@ -61,6 +61,7 @@ function neptune_customizer_social_networks($wp_customize)
     // Instagram
     $wp_customize->add_setting('neptune_social_instagram', [
         'transport' => 'refresh',
+        'sanitize_callback' => 'esc_attr',
     ]);
 
     $wp_customize->add_control(
@@ -68,10 +69,9 @@ function neptune_customizer_social_networks($wp_customize)
             $wp_customize,
             'neptune_control_social_instagram',
             [
-                'label' => __('Instagram Link', 'neptune'),
-                //'description' => __('Please enter your instagram account link', 'neptune'),
+                'label' => 'Instagram Link',
                 'input_attrs' => [
-                    'placeholder' => __('https://', 'neptune'),
+                    'placeholder' => 'https://',
                 ],
                 'section' => 'neptune_section_social_networks',
                 'settings' => 'neptune_social_instagram',
@@ -83,6 +83,7 @@ function neptune_customizer_social_networks($wp_customize)
      // Facebook
      $wp_customize->add_setting('neptune_social_facebook', [
         'transport' => 'refresh',
+        'sanitize_callback' => 'esc_attr',
     ]);
 
     $wp_customize->add_control(
@@ -90,10 +91,9 @@ function neptune_customizer_social_networks($wp_customize)
             $wp_customize,
             'neptune_control_social_facebook',
             [
-                'label' => __('Facebook Link', 'neptune'),
-                //'description' => __('Please enter your Facebook account link', 'neptune'),
+                'label' => 'Facebook Link',
                 'input_attrs' => [
-                    'placeholder' => __('https://', 'neptune'),
+                    'placeholder' => 'https://',
                 ],
                 'section' => 'neptune_section_social_networks',
                 'settings' => 'neptune_social_facebook',
