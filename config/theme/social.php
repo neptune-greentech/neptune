@@ -10,7 +10,7 @@ function neptune_customizer_social_networks($wp_customize)
 {
     $wp_customize->add_section('neptune_section_social_networks', [
         'title' => 'Social Medias',
-        'description' => __("Please add your social networks links. Leave empty if you don't want the social network's icon to appear.", 'neptune'),
+        'description' => "Please add your social networks links. Leave empty if you don't want the social network's icon to appear.",
         'priority' => 81,
     ]);
 

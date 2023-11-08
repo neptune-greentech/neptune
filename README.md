@@ -1,4 +1,4 @@
-# Neptune
+# Neptune by Kairos
 
 A green WordPress theme.
 Since a lot of people is using WordPress, and considering our ecological ideology, we want to provide people a way to reduce their carbon footprint, without changing their CMS.
@@ -73,10 +73,10 @@ function neptune_customizer_options( $wp_customize ) {
 			$wp_customize,
 			'neptune_custom_background_color',
 			array(
-				'label'      => __( 'Background Color', 'neptune' ),
+				'label'      => __( 'Background Color', 'neptune-by-kairos' ),
 				'section'    => 'colors',
 				'settings'   => 'neptune_background_color',
-				'description' => __('Select the background color', 'neptune'),
+				'description' => __('Select the background color', 'neptune-by-kairos'),
 				'selector' => "#neptune_bg_color"
 			)
 		)

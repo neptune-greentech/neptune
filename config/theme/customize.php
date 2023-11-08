@@ -37,10 +37,10 @@ function neptune_customizer_colors($wp_customize) {
             $wp_customize,
             'neptune_control_background_color',
             [
-                'label' => __('Background Color', 'neptune'),
+                'label' => 'Background Color',
                 'section' => 'colors',
                 'settings' => 'neptune_background_color',
-                'description' => __('Please select a background color', 'neptune'),
+                'description' => 'Please select a background color',
             ]
         )
     );
@@ -50,10 +50,10 @@ function neptune_customizer_colors($wp_customize) {
             $wp_customize,
             'neptune_control_primary_color',
             [
-                'label' => __('Primary Color', 'neptune'),
+                'label' => 'Primary Color',
                 'section' => 'colors',
                 'settings' => 'neptune_primary_color',
-                'description' => __('Please select a primary color', 'neptune'),
+                'description' => 'Please select a primary color',
             ]
         )
     );
@@ -63,10 +63,10 @@ function neptune_customizer_colors($wp_customize) {
             $wp_customize,
             'neptune_control_dark_color',
             [
-                'label' => __('Dark Color', 'neptune'),
+                'label' => 'Dark Color',
                 'section' => 'colors',
                 'settings' => 'neptune_dark_color',
-                'description' => __('Please select a dark color', 'neptune'),
+                'description' => 'Please select a dark color',
             ]
         )
     );
@@ -76,10 +76,10 @@ function neptune_customizer_colors($wp_customize) {
             $wp_customize,
             'neptune_control_white_color',
             [
-                'label' => __('White Color', 'neptune'),
+                'label' => 'White Color',
                 'section' => 'colors',
                 'settings' => 'neptune_white_color',
-                'description' => __('Please select a white color', 'neptune'),
+                'description' => 'Please select a white color',
             ]
         )
     );
@@ -89,10 +89,10 @@ function neptune_customizer_colors($wp_customize) {
             $wp_customize,
             'neptune_control_gray_color',
             [
-                'label' => __('Gray Color', 'neptune'),
+                'label' => 'Gray Color',
                 'section' => 'colors',
                 'settings' => 'neptune_gray_color',
-                'description' => __('Please select a gray color', 'neptune'),
+                'description' => 'Please select a gray color',
             ]
         )
     );
